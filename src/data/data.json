@@ -1,0 +1,85 @@
+{
+  "Tasks": [
+    {
+      "id": 1,
+      "name": "Develop Project Proposal",
+      "description": "Draft and finalize the project proposal document.",
+      "dueDate": "2024-07-15T23:59:59.000Z",
+      "status": "Pending",
+      "priority": "High",
+      "assignedTo": "John Smith",
+      "createdAt": "2024-06-25T09:00:00.000Z",
+      "updatedAt": "2024-07-01T10:00:00.000Z",
+      "subtasks": [
+        { "id": 1, "name": "Draft Initial Proposal", "status": "Completed" },
+        { "id": 2, "name": "Review with Team", "status": "Pending" },
+        { "id": 3, "name": "Finalize Document", "status": "Pending" }
+      ],
+      "completed": false
+    },
+    {
+      "id": 2,
+      "name": "Set Up Development Environment",
+      "description": "Install and configure all necessary tools and software.",
+      "dueDate": "2024-07-05T17:00:00.000Z",
+      "status": "Completed",
+      "priority": "Medium",
+      "assignedTo": "Bob Smith",
+      "createdAt": "2024-06-20T08:00:00.000Z",
+      "updatedAt": "2024-07-04T16:30:00.000Z",
+      "subtasks": [
+        { "id": 1, "name": "Install IDE", "status": "Completed" },
+        { "id": 2, "name": "Configure Version Control", "status": "Completed" },
+        { "id": 3, "name": "Set Up Database", "status": "Completed" }
+      ],
+      "completed": true
+    },
+    {
+      "id": 3,
+      "name": "Design Website Layout",
+      "description": "Create a wireframe and mockup for the new website layout.",
+      "dueDate": "2024-07-20T23:59:59.000Z",
+      "status": "Pending",
+      "priority": "Low",
+      "assignedTo": "Ike James",
+      "createdAt": "2024-06-30T11:00:00.000Z",
+      "updatedAt": "2024-06-30T11:00:00.000Z",
+      "subtasks": [],
+      "completed": false
+    },
+    {
+      "id": 4,
+      "name": "Conduct User Testing",
+      "description": "Organize and conduct user testing sessions.",
+      "dueDate": "2024-07-25T18:00:00.000Z",
+      "status": "Completed",
+      "priority": "High",
+      "assignedTo": "Jessica Brown",
+      "createdAt": "2024-06-28T14:00:00.000Z",
+      "updatedAt": "2024-07-01T13:30:00.000Z",
+      "subtasks": [
+        { "id": 1, "name": "Recruit Participants", "status": "Completed" },
+        { "id": 2, "name": "Prepare Test Cases", "status": "Completed" },
+        { "id": 3, "name": "Conduct Testing", "status": "Pending" }
+      ],
+      "completed": true
+    },
+    {
+      "id": 5,
+      "name": "Launch Marketing Campaign",
+      "description": "Plan and execute the marketing campaign for the product launch.",
+      "dueDate": "2024-08-01T23:59:59.000Z",
+      "status": "Pending",
+      "priority": "Medium",
+      "assignedTo": "Ola Victor",
+      "createdAt": "2024-07-01T10:00:00.000Z",
+      "updatedAt": "2024-07-01T10:00:00.000Z",
+      "subtasks": [
+        { "id": 1, "name": "Develop Strategy", "status": "Pending" },
+        { "id": 2, "name": "Create Content", "status": "Pending" },
+        { "id": 3, "name": "Schedule Posts", "status": "Pending" }
+      ],
+      "completed": false
+    }
+  ]
+}
