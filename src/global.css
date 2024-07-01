@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*PRIMARY COLORS*/
+@layer base {
+  :root {
+    --background-color: #ffff;
+    --text-color: #000;
+    --text-color-secondary: #898a8a;
+    --background-btn: #1486d8;
+    --text-color-btn: #ffff;
+    --text-btn-hover: #3b3b3b;
+    --radio-btn-checked: ##898a8a;
+    --radio-btn-unchecked: #1486d8;
+  }
+}

@@ -1,11 +1,27 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      roboto: "var(--font-roboto)",
+    },
+    extend: {
+      colors: {
+        text_color: "var(--color-text)",
+        text_color_secondary: "var(--color-text-secondary)",
+        background_btn: "var(--color-background-btn)",
+        text_color_btn: "var(--color-text-btn)",
+        radio_btn_checked: "var(--color-radio-btn-checked)",
+        radio_btn_unchecked: "var(--color-radio-btn-unchecked)",
+      },
+      backgroundColor: {
+        background: "var(--color-background)",
+      },
+    },
   },
-  plugins: [],
-}
+};
 
+module.exports = config;
