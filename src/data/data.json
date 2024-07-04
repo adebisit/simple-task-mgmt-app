@@ -1,84 +1,243 @@
 {
-  "Tasks": [
+  "tasks": [
     {
       "id": 1,
-      "name": "Develop Project Proposal",
-      "description": "Draft and finalize the project proposal document.",
+      "name": "Prepare Lesson Plan",
+      "description": "Create a comprehensive lesson plan for the upcoming semester.",
       "dueDate": "2024-07-15T23:59:59.000Z",
-      "status": "Pending",
-      "priority": "High",
-      "assignedTo": "John Smith",
+      "priority": 5,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Research Curriculum",
+          "description": "Review and analyze the curriculum to identify key topics.",
+          "Completed": true
+        },
+        {
+          "id": 2,
+          "name": "Draft Weekly Plans",
+          "description": "Create a draft plan for each week's lessons.",
+          "Completed": true
+        },
+        {
+          "id": 3,
+          "name": "Create Assessment Materials",
+          "description": "Design quizzes and tests for student evaluations.",
+          "Completed": false
+        }
+      ],
       "createdAt": "2024-06-25T09:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
-      "subtasks": [
-        { "id": 1, "name": "Draft Initial Proposal", "status": "Completed" },
-        { "id": 2, "name": "Review with Team", "status": "Pending" },
-        { "id": 3, "name": "Finalize Document", "status": "Pending" }
-      ],
       "completed": false
     },
     {
       "id": 2,
-      "name": "Set Up Development Environment",
-      "description": "Install and configure all necessary tools and software.",
+      "name": "Prepare for Harvest",
+      "description": "Get all necessary equipment and logistics ready for the upcoming harvest season.",
       "dueDate": "2024-07-05T17:00:00.000Z",
-      "status": "Completed",
-      "priority": "Medium",
-      "assignedTo": "Bob Smith",
+      "priority": 5,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Inspect Equipment",
+          "description": "Check all harvesting machinery and tools for functionality.",
+          "Completed": false
+        },
+        {
+          "id": 2,
+          "name": "Hire Seasonal Workers",
+          "description": "Recruit and hire temporary workers for the harvest period.",
+          "Completed": false
+        },
+        {
+          "id": 3,
+          "name": "Set Up Storage Facilities",
+          "description": "Prepare storage areas for harvested crops.",
+          "Completed": false
+        }
+      ],
       "createdAt": "2024-06-20T08:00:00.000Z",
       "updatedAt": "2024-07-04T16:30:00.000Z",
-      "subtasks": [
-        { "id": 1, "name": "Install IDE", "status": "Completed" },
-        { "id": 2, "name": "Configure Version Control", "status": "Completed" },
-        { "id": 3, "name": "Set Up Database", "status": "Completed" }
-      ],
       "completed": true
     },
     {
       "id": 3,
-      "name": "Design Website Layout",
-      "description": "Create a wireframe and mockup for the new website layout.",
+      "name": "Renovate Kitchen",
+      "description": "Plan and execute the kitchen renovation project.",
       "dueDate": "2024-07-20T23:59:59.000Z",
-      "status": "Pending",
-      "priority": "Low",
-      "assignedTo": "Ike James",
+      "priority": 3,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Hire Contractor",
+          "description": "Find and hire a reputable contractor for the renovation.",
+          "Completed": false
+        },
+        {
+          "id": 2,
+          "name": "Select Materials",
+          "description": "Choose the materials and finishes for the kitchen.",
+          "Completed": false
+        },
+        {
+          "id": 3,
+          "name": "Approve Design",
+          "description": "Review and approve the final kitchen design.",
+          "Completed": false
+        }
+      ],
       "createdAt": "2024-06-30T11:00:00.000Z",
       "updatedAt": "2024-06-30T11:00:00.000Z",
-      "subtasks": [],
       "completed": false
     },
     {
       "id": 4,
-      "name": "Conduct User Testing",
-      "description": "Organize and conduct user testing sessions.",
+      "name": "Complete Research Paper",
+      "description": " Write and submit the final research paper for the semester.",
       "dueDate": "2024-07-25T18:00:00.000Z",
-      "status": "Completed",
-      "priority": "High",
-      "assignedTo": "Jessica Brown",
+      "priority": 2,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Gather Sources",
+          "description": "Collect and organize all necessary research materials.",
+          "Completed": false
+        },
+        {
+          "id": 2,
+          "name": "Draft Outline",
+          "description": "Create an outline to structure the paper.",
+          "Completed": false
+        },
+        {
+          "id": 3,
+          "name": "Write First Draft",
+          "description": "Write the initial draft of the research paper.",
+          "Completed": false
+        }
+      ],
       "createdAt": "2024-06-28T14:00:00.000Z",
       "updatedAt": "2024-07-01T13:30:00.000Z",
-      "subtasks": [
-        { "id": 1, "name": "Recruit Participants", "status": "Completed" },
-        { "id": 2, "name": "Prepare Test Cases", "status": "Completed" },
-        { "id": 3, "name": "Conduct Testing", "status": "Pending" }
-      ],
       "completed": true
     },
     {
       "id": 5,
-      "name": "Launch Marketing Campaign",
-      "description": "Plan and execute the marketing campaign for the product launch.",
+      "name": "Organize Team Meeting",
+      "description": "Plan and arrange the quarterly team meeting.",
       "dueDate": "2024-08-01T23:59:59.000Z",
-      "status": "Pending",
-      "priority": "Medium",
-      "assignedTo": "Ola Victor",
+      "priority": 1,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Book Conference Room",
+          "description": "Reserve a suitable conference room for the meeting.",
+          "Completed": false
+        },
+        {
+          "id": 2,
+          "name": "Prepare Agenda",
+          "description": "Create a detailed agenda for the meeting.",
+          "Completed": false
+        },
+        {
+          "id": 3,
+          "name": "Send Invites",
+          "description": "Send out meeting invitations to all team members.",
+          "Completed": false
+        }
+      ],
       "createdAt": "2024-07-01T10:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "name": "Plan Birthday Party",
+      "description": "Organize a birthday party for the child.",
+      "dueDate": "2024-08-01T23:59:59.000Z",
+      "priority": 1,
       "subtasks": [
-        { "id": 1, "name": "Develop Strategy", "status": "Pending" },
-        { "id": 2, "name": "Create Content", "status": "Pending" },
-        { "id": 3, "name": "Schedule Posts", "status": "Pending" }
+        {
+          "id": 1,
+          "name": "Create Guest List",
+          "description": "List all guests to be invited to the party.",
+          "Completed": false
+        },
+        {
+          "id": 2,
+          "name": "Order Cake",
+          "description": "Select and order a birthday cake.",
+          "Completed": false
+        },
+        {
+          "id": 3,
+          "name": "Book Venue",
+          "description": "Reserve a venue for the birthday party.",
+          "Completed": false
+        }
       ],
+      "createdAt": "2024-07-01T10:00:00.000Z",
+      "updatedAt": "2024-07-01T10:00:00.000Z",
+      "completed": false
+    },
+    {
+      "id": 7,
+      "name": "Launch Marketing Campaign",
+      "description": "Develop and initiate a marketing campaign for the new product.",
+      "dueDate": "2024-08-01T23:59:59.000Z",
+      "priority": 1,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Design Ads",
+          "description": "Create advertisements for the campaign.",
+          "Completed": false
+        },
+        {
+          "id": 2,
+          "name": "Select Platforms",
+          "description": "Choose platforms for running the ads.",
+          "Completed": false
+        },
+        {
+          "id": 3,
+          "name": "Set Budget",
+          "description": "Determine the budget for the campaign.",
+          "Completed": false
+        }
+      ],
+      "createdAt": "2024-07-01T10:00:00.000Z",
+      "updatedAt": "2024-07-01T10:00:00.000Z",
+      "completed": false
+    },
+    {
+      "id": 8,
+      "name": "Plan Vacation",
+      "description": "Organize all aspects of the upcoming vacation.",
+      "dueDate": "2024-08-01T23:59:59.000Z",
+      "priority": 1,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Book Flights",
+          "description": "Purchase flight tickets for the trip.",
+          "Completed": false
+        },
+        {
+          "id": 2,
+          "name": "Reserve Accommodations",
+          "description": "Book hotels or other accommodations.",
+          "Completed": true
+        },
+        {
+          "id": 3,
+          "name": "Create Itinerary",
+          "description": "Plan daily activities and sightseeing.",
+          "Completed": false
+        }
+      ],
+      "createdAt": "2024-07-01T10:00:00.000Z",
+      "updatedAt": "2024-07-01T10:00:00.000Z",
       "completed": false
     }
   ]
