@@ -1,7 +1,7 @@
 {
   "tasks": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Prepare Lesson Plan",
       "description": "Create a comprehensive lesson plan for the upcoming semester.",
       "dueDate": "2024-07-15T23:59:59.000Z",
@@ -26,42 +26,20 @@
           "Completed": false
         }
       ],
+      "notes": [
+        "Ensure all lesson plans align with the updated curriculum guidelines.",
+        "Incorporate feedback from previous semesters to improve the lesson structure.",
+        "Allocate time for interactive activities and student engagement."
+      ],
       "createdAt": "2024-06-25T09:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
       "completed": false
     },
     {
-      "id": 2,
-      "name": "Prepare for Harvest",
-      "description": "Get all necessary equipment and logistics ready for the upcoming harvest season.",
-      "dueDate": "2024-07-05T17:00:00.000Z",
-      "priority": 5,
-      "subtasks": [
-        {
-          "id": 1,
-          "name": "Inspect Equipment",
-          "description": "Check all harvesting machinery and tools for functionality.",
-          "Completed": false
-        },
-        {
-          "id": 2,
-          "name": "Hire Seasonal Workers",
-          "description": "Recruit and hire temporary workers for the harvest period.",
-          "Completed": false
-        },
-        {
-          "id": 3,
-          "name": "Set Up Storage Facilities",
-          "description": "Prepare storage areas for harvested crops.",
-          "Completed": false
-        }
-      ],
-      "createdAt": "2024-06-20T08:00:00.000Z",
-      "updatedAt": "2024-07-04T16:30:00.000Z",
-      "completed": true
+      "id": "2"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Renovate Kitchen",
       "description": "Plan and execute the kitchen renovation project.",
       "dueDate": "2024-07-20T23:59:59.000Z",
@@ -86,12 +64,17 @@
           "Completed": false
         }
       ],
+      "notes": [
+        "Ensure to get multiple quotes from contractors to find the best deal.",
+        "Consider energy-efficient appliances and sustainable materials.",
+        "Create a temporary kitchen setup during the renovation period."
+      ],
       "createdAt": "2024-06-30T11:00:00.000Z",
       "updatedAt": "2024-06-30T11:00:00.000Z",
       "completed": false
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Complete Research Paper",
       "description": " Write and submit the final research paper for the semester.",
       "dueDate": "2024-07-25T18:00:00.000Z",
@@ -116,12 +99,17 @@
           "Completed": false
         }
       ],
+      "notes": [
+        "Schedule regular check-ins with your advisor to get feedback on your progress.",
+        "Ensure all sources are properly cited to avoid plagiarism.",
+        "Allow time for multiple revisions and proofreading."
+      ],
       "createdAt": "2024-06-28T14:00:00.000Z",
       "updatedAt": "2024-07-01T13:30:00.000Z",
       "completed": true
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Organize Team Meeting",
       "description": "Plan and arrange the quarterly team meeting.",
       "dueDate": "2024-08-01T23:59:59.000Z",
@@ -146,12 +134,17 @@
           "Completed": false
         }
       ],
+      "notes": [
+        "Confirm the availability of key team members before finalizing the meeting date.",
+        "Distribute the agenda in advance to allow team members to prepare.",
+        "Arrange for any necessary audiovisual equipment."
+      ],
       "createdAt": "2024-07-01T10:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
       "completed": false
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Plan Birthday Party",
       "description": "Organize a birthday party for the child.",
       "dueDate": "2024-08-01T23:59:59.000Z",
@@ -176,12 +169,17 @@
           "Completed": false
         }
       ],
+      "notes": [
+        "Reach out to parents for dietary restrictions or allergies for the guests.",
+        "Plan fun activities and games for the children.",
+        "Ensure there is a backup plan in case of bad weather if the party is outdoors."
+      ],
       "createdAt": "2024-07-01T10:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
       "completed": false
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Launch Marketing Campaign",
       "description": "Develop and initiate a marketing campaign for the new product.",
       "dueDate": "2024-08-01T23:59:59.000Z",
@@ -206,12 +204,17 @@
           "Completed": false
         }
       ],
+      "notes": [
+        "Analyze competitor campaigns for insights on effective strategies.",
+        "Track and measure the performance of the campaign.",
+        "Allocate a portion of the budget for A/B testing."
+      ],
       "createdAt": "2024-07-01T10:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
       "completed": false
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Plan Vacation",
       "description": "Organize all aspects of the upcoming vacation.",
       "dueDate": "2024-08-01T23:59:59.000Z",
@@ -236,9 +239,17 @@
           "Completed": false
         }
       ],
+      "notes": [
+        "Check for any travel restrictions or requirements for the destination.",
+        "Ensure all travel documents, including passports and visas, are up to date.",
+        "Research local attractions and make reservations for popular activities in advance."
+      ],
       "createdAt": "2024-07-01T10:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
       "completed": false
+    },
+    {
+      "id": "fa23"
     }
   ]
 }
