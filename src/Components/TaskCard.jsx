@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import moment from "moment";
+import Moment from "react-moment";
 
 //importing files...
 import { TASK_DESCRIPTION, TASK_TITLE } from "../constants";
@@ -11,9 +13,12 @@ const TaskCard = () => {
     setIsIconChecked(!isIconChecked);
   };
 
+  //get date from moment package
+  const dueDate = moment().add(5, "days");
+
   return (
     <>
-      <div className="flex flex-row items-start p-4 mt-4 mb-4 w-full items-center">
+      <div className="flex flex-row items-start mt-4 mb-4 w-full items-center">
         <div
           onClick={handleCheckIconClick}
           className={`mr-4 cursor-pointer text-2xl ${
@@ -26,17 +31,27 @@ const TaskCard = () => {
           <CustomRadioButton isIconChecked={isIconChecked} />
         </div>
         <div className="flex-1">
-          <div className="font-bold">{TASK_TITLE.toString()}</div>
-          <div className="text-gray-600">{TASK_DESCRIPTION.toString()}</div>
+          <div style={{ fontSize: "20px" }} className="font-bold">
+            {TASK_TITLE}
+          </div>
+          <div
+            style={{ fontSize: "16px" }}
+            className="text-gray-600 font-inter"
+          >
+            {TASK_DESCRIPTION}
+          </div>
+          <div
+            style={{ fontSize: "12px" }}
+            className="font-bold text-red-600"
+          >
+            Due: <Moment toNow>{dueDate}</Moment>
+          </div>
         </div>
         <div className="flex gap-4">
           <EditIcon />
           <DeleteIcon />
         </div>
       </div>
-      <a href="#" className="text-blue-500 underline">
-        see more...
-      </a>
     </>
   );
 };
