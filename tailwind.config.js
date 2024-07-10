@@ -6,7 +6,7 @@ const config = {
   ],
   theme: {
     fontFamily: {
-      roboto: "var(--font-roboto)",
+      inter: ["var(--font-inter)", "sans-serif"],
     },
     extend: {
       colors: {
