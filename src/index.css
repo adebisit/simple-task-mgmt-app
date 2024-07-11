@@ -4,6 +4,7 @@
 /*PRIMARY COLORS*/
 @layer base {
   :root {
+    --font-inter: "Inter", sans-serif;
     --background-color: #ffff;
     --text-color: #000;
     --text-color-secondary: #898a8a;
@@ -12,5 +13,9 @@
     --text-btn-hover: #3b3b3b;
     --radio-btn-checked: ##898a8a;
     --radio-btn-unchecked: #1486d8;
+  }
+
+  body {
+    font-family: var(--font-inter);
   }
 }

@@ -1,11 +1,11 @@
+//importing react packages...
 import React from "react";
 
-function Navbar() {
-  return (
-    <div className="flex justify-center items-center ">
-      <h1 className="text-gray-500 text-4xl">Task Manager</h1>
-    </div>
-  );
-}
+//importing files...
+import { HEADER_TEXT } from "../constants";
+
+const Navbar = () => {
+  return <h1 className="text-3xl mb-4 text-gray-500">{HEADER_TEXT}</h1>;
+};
 
 export default Navbar;
