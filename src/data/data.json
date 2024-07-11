@@ -1,0 +1,356 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "name": "Prepare Lesson Plan",
+      "description": "Create a comprehensive lesson plan for the upcoming semester.",
+      "dueDate": "2024-07-15T23:59:59.000Z",
+      "priority": 5,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Research Curriculum",
+          "description": "Review and analyze the curriculum to identify key topics.",
+          "completedAt": null
+        },
+        {
+          "id": 2,
+          "name": "Draft Weekly Plans",
+          "description": "Create a draft plan for each week's lessons.",
+          "completedAt": null
+        },
+        {
+          "id": 3,
+          "name": "Create Assessment Materials",
+          "description": "Design quizzes and tests for student evaluations.",
+          "completedAt": null
+        }
+      ],
+      "notes": [
+        {
+          "note": "Ensure all lesson plans align with the updated curriculum guidelines.",
+          "createdAt": "2024-07-02T08:00:00.000Z"
+        },
+        {
+          "note": "Incorporate feedback from previous semesters to improve the lesson structure.",
+          "createdAt": "2024-07-03T09:00:00.000Z"
+        },
+        {
+          "note": "Allocate time for interactive activities and student engagement.",
+          "createdAt": "2024-07-04T10:00:00.000Z"
+        }
+      ],
+      "createdAt": "2024-06-25T09:00:00.000Z",
+      "updatedAt": "2024-07-01T10:00:00.000Z",
+      "completedAt": "2024-06-25T09:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Prepare for Harvest",
+      "description": "Get all necessary equipment and logistics ready for the upcoming harvest season.",
+      "dueDate": "2024-07-05T17:00:00.000Z",
+      "priority": 5,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Inspect Equipment",
+          "description": "Check all harvesting machinery and tools for functionality.",
+          "completedAt": null
+        },
+        {
+          "id": 2,
+          "name": "Hire Seasonal Workers",
+          "description": "Recruit and hire temporary workers for the harvest period.",
+          "completedAt": null
+        },
+        {
+          "id": 3,
+          "name": "Set Up Storage Facilities",
+          "description": "Prepare storage areas for harvested crops.",
+          "completedAt": null
+        }
+      ],
+      "notes": [
+        {
+          "note": "Coordinate with suppliers to ensure timely delivery of spare parts for machinery.",
+          "createdAt": "2024-07-02T08:00:00.000Z"
+        },
+        {
+          "note": "Confirm availability of seasonal workers and verify their work permits.",
+          "createdAt": "2024-07-03T09:00:00.000Z"
+        },
+        {
+          "note": "Schedule a final walkthrough of storage facilities to ensure they meet safety standards.",
+          "createdAt": "2024-07-04T10:00:00.000Z"
+        }
+      ],
+      "createdAt": "2024-06-20T08:00:00.000Z",
+      "updatedAt": "2024-07-04T16:30:00.000Z",
+      "completedAt": "2024-07-04T16:30:00.000Z"
+    },
+    {
+      "id": "3",
+      "name": "Renovate Kitchen",
+      "description": "Plan and execute the kitchen renovation project.",
+      "dueDate": "2024-07-20T23:59:59.000Z",
+      "priority": 3,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Hire Contractor",
+          "description": "Find and hire a reputable contractor for the renovation.",
+          "completedAt": null
+        },
+        {
+          "id": 2,
+          "name": "Select Materials",
+          "description": "Choose the materials and finishes for the kitchen.",
+          "completedAt": null
+        },
+        {
+          "id": 3,
+          "name": "Approve Design",
+          "description": "Review and approve the final kitchen design.",
+          "completedAt": null
+        }
+      ],
+      "notes": [
+        {
+          "note": "Ensure to get multiple quotes from contractors to find the best deal.",
+          "createdAt": "2024-07-02T08:00:00.000Z"
+        },
+        {
+          "note": "Consider energy-efficient appliances and sustainable materials.",
+          "createdAt": "2024-07-03T09:00:00.000Z"
+        },
+        {
+          "note": "Create a temporary kitchen setup during the renovation period.",
+          "createdAt": "2024-07-04T10:00:00.000Z"
+        }
+      ],
+      "createdAt": "2024-06-30T11:00:00.000Z",
+      "updatedAt": "2024-06-30T11:00:00.000Z",
+      "completedAt": "2024-06-30T11:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "name": "Complete Research Paper",
+      "description": " Write and submit the final research paper for the semester.",
+      "dueDate": "2024-07-25T18:00:00.000Z",
+      "priority": 2,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Gather Sources",
+          "description": "Collect and organize all necessary research materials.",
+          "completedAt": null
+        },
+        {
+          "id": 2,
+          "name": "Draft Outline",
+          "description": "Create an outline to structure the paper.",
+          "completedAt": null
+        },
+        {
+          "id": 3,
+          "name": "Write First Draft",
+          "description": "Write the initial draft of the research paper.",
+          "completedAt": null
+        }
+      ],
+      "notes": [
+        {
+          "note": "Schedule regular check-ins with your advisor to get feedback on your progress.",
+          "createdAt": "2024-07-02T08:00:00.000Z"
+        },
+        {
+          "note":  "Ensure all sources are properly cited to avoid plagiarism.",
+          "createdAt": "2024-07-03T09:00:00.000Z"
+        },
+        {
+          "note": "Allow time for multiple revisions and proofreading.",
+          "createdAt": "2024-07-04T10:00:00.000Z"
+        }
+      ],
+      "createdAt": "2024-06-28T14:00:00.000Z",
+      "updatedAt": "2024-07-01T13:30:00.000Z",
+      "completedAt": "2024-07-01T13:30:00.000Z"
+    },
+    {
+      "id": "5",
+      "name": "Organize Team Meeting",
+      "description": "Plan and arrange the quarterly team meeting.",
+      "dueDate": "2024-08-01T23:59:59.000Z",
+      "priority": 1,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Book Conference Room",
+          "description": "Reserve a suitable conference room for the meeting.",
+          "completedAt": null
+        },
+        {
+          "id": 2,
+          "name": "Prepare Agenda",
+          "description": "Create a detailed agenda for the meeting.",
+          "completedAt": null
+        },
+        {
+          "id": 3,
+          "name": "Send Invites",
+          "description": "Send out meeting invitations to all team members.",
+          "completedAt": null
+        }
+      ],
+      "notes": [
+        {
+          "note": "Confirm the availability of key team members before finalizing the meeting date.",
+          "createdAt": "2024-07-02T08:00:00.000Z"
+        },
+        {
+          "note": "Distribute the agenda in advance to allow team members to prepare.",
+          "createdAt": "2024-07-03T09:00:00.000Z"
+        },
+        {
+          "note": "Arrange for any necessary audiovisual equipment.",
+          "createdAt": "2024-07-04T10:00:00.000Z"
+        }
+      ],
+      "createdAt": "2024-07-01T10:00:00.000Z",
+      "updatedAt": "2024-07-01T10:00:00.000Z",
+      "completedAt": "2024-07-01T10:00:00.000Z"
+    },
+    {
+      "id": "6",
+      "name": "Plan Birthday Party",
+      "description": "Organize a birthday party for the child.",
+      "dueDate": "2024-08-01T23:59:59.000Z",
+      "priority": 1,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Create Guest List",
+          "description": "List all guests to be invited to the party.",
+          "completedAt": null
+        },
+        {
+          "id": 2,
+          "name": "Order Cake",
+          "description": "Select and order a birthday cake.",
+          "completedAt": null
+        },
+        {
+          "id": 3,
+          "name": "Book Venue",
+          "description": "Reserve a venue for the birthday party.",
+          "completedAt": null
+        }
+      ],
+      "notes": [
+        {
+          "note": "Reach out to parents for dietary restrictions or allergies for the guests.",
+          "createdAt": "2024-07-02T08:00:00.000Z"
+        },
+        {
+          "note": "Plan fun activities and games for the children.",
+          "createdAt": "2024-07-03T09:00:00.000Z"
+        },
+        {
+          "note": "Ensure there is a backup plan in case of bad weather if the party is outdoors.",
+          "createdAt": "2024-07-04T10:00:00.000Z"
+        }
+      ],
+      "createdAt": "2024-07-01T10:00:00.000Z",
+      "updatedAt": "2024-07-01T10:00:00.000Z",
+      "completedAt": "2024-07-01T10:00:00.000Z"
+    },
+    {
+      "id": "7",
+      "name": "Launch Marketing Campaign",
+      "description": "Develop and initiate a marketing campaign for the new product.",
+      "dueDate": "2024-08-01T23:59:59.000Z",
+      "priority": 1,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Design Ads",
+          "description": "Create advertisements for the campaign.",
+          "completedAt": null
+        },
+        {
+          "id": 2,
+          "name": "Select Platforms",
+          "description": "Choose platforms for running the ads.",
+          "completedAt": null
+        },
+        {
+          "id": 3,
+          "name": "Set Budget",
+          "description": "Determine the budget for the campaign.",
+          "completedAt": null
+        }
+      ],
+      "notes": [
+        {
+          "note": "Analyze competitor campaigns for insights on effective strategies.",
+          "createdAt": "2024-07-02T08:00:00.000Z"
+        },
+        {
+          "note": "Track and measure the performance of the campaign.",
+          "createdAt": "2024-07-03T09:00:00.000Z"
+        },
+        {
+          "note": "Allocate a portion of the budget for A/B testing.",
+          "createdAt": "2024-07-04T10:00:00.000Z"
+        }
+      ],
+      "createdAt": "2024-07-01T10:00:00.000Z",
+      "updatedAt": "2024-07-01T10:00:00.000Z",
+      "completedAt": "2024-07-01T10:00:00.000Z"
+    },
+    {
+      "id": "8",
+      "name": "Plan Vacation",
+      "description": "Organize all aspects of the upcoming vacation.",
+      "dueDate": "2024-08-01T23:59:59.000Z",
+      "priority": 1,
+      "subtasks": [
+        {
+          "id": 1,
+          "name": "Book Flights",
+          "description": "Purchase flight tickets for the trip.",
+          "completedAt": null
+        },
+        {
+          "id": 2,
+          "name": "Reserve Accommodations",
+          "description": "Book hotels or other accommodations.",
+          "completedAt": null
+        },
+        {
+          "id": 3,
+          "name": "Create Itinerary",
+          "description": "Plan daily activities and sightseeing.",
+          "completedAt": null
+        }
+      ],
+      "notes": [
+        {
+          "note":  "Check for any travel restrictions or requirements for the destination.",
+          "createdAt": "2024-07-02T08:00:00.000Z"
+        },
+        {
+          "note":  "Ensure all travel documents, including passports and visas, are up to date.",
+          "createdAt": "2024-07-03T09:00:00.000Z"
+        },
+        {
+          "note": "Research local attractions and make reservations for popular activities in advance.",
+          "createdAt": "2024-07-04T10:00:00.000Z"
+        }
+      ],
+      "createdAt": "2024-07-01T10:00:00.000Z",
+      "updatedAt": "2024-07-01T10:00:00.000Z",
+      "completedAt": "2024-07-01T10:00:00.000Z"
+    }
+  ]
+}
