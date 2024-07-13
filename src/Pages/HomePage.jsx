@@ -1,12 +1,12 @@
-//importing React packages...
-import React from "react";
+// Importing React packages...
 
-//importing components...
+// Importing components...
 import Navbar from "../components/Navbar";
 import Search from "../components/Search";
 import TaskCard from "../components/TaskCard";
 import AddTaskButton from "../components/AddTaskButton";
 import SeeMoreLink from "../components/SeeMoreLink";
+import AddTaskForm from "../components/AddTaskForm";
 
 function HomePage() {
   return (
@@ -14,8 +14,8 @@ function HomePage() {
       <Navbar />
       <Search />
       <TaskCard />
-      <AddTaskButton />
-      <SeeMoreLink/>
+      <AddTaskButton onClick={AddTaskForm} />
+      <SeeMoreLink />
     </div>
   );
 }

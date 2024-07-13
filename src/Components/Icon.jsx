@@ -16,6 +16,7 @@ const DeleteIcon = () => (
 const CustomRadioButton = ({ isIconChecked }) => {
   return <Icon icon={isIconChecked ? radioButtonOn : radioButtonOff} />;
 };
+
 const PlusIcon = () => <Icon icon={plusLight} height="50" width="50" />;
 
 const FilterIcon = () => {
@@ -25,6 +26,7 @@ const FilterIcon = () => {
     </div>
   );
 };
+
 const SortIcon = () => {
   return (
     <div className="bg-gray-300 p-2 rounded-lg items-center justify-center cursor-pointer">
@@ -32,6 +34,7 @@ const SortIcon = () => {
     </div>
   );
 };
+
 export {
   EditIcon,
   DeleteIcon,

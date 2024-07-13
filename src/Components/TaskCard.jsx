@@ -6,7 +6,7 @@ import Moment from "react-moment";
 import { TASK_DESCRIPTION, TASK_TITLE } from "../constants";
 import { EditIcon, DeleteIcon, CustomRadioButton } from "./Icon";
 
-const TaskCard = () => {
+const TaskCard = ({ onDelete }) => {
   const [isIconChecked, setIsIconChecked] = useState(false);
 
   const handleCheckIconClick = () => {
@@ -40,16 +40,17 @@ const TaskCard = () => {
           >
             {TASK_DESCRIPTION}
           </div>
-          <div
-            style={{ fontSize: "12px" }}
-            className="font-bold text-red-600"
-          >
+          <div style={{ fontSize: "12px" }} className="font-bold text-red-600">
             Due: <Moment toNow>{dueDate}</Moment>
           </div>
         </div>
         <div className="flex gap-4">
-          <EditIcon />
-          <DeleteIcon />
+          <button>
+            <EditIcon className="cursor-pointer" />
+          </button>
+          <button>
+            <DeleteIcon className="cursor-pointer" />
+          </button>
         </div>
       </div>
     </>

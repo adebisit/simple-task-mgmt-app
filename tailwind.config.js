@@ -11,9 +11,9 @@ const config = {
     extend: {
       colors: {
         text_color: "var(--color-text)",
-        text_color_secondary: "var(--color-text-secondary)",
-        background_btn: "var(--color-background-btn)",
-        text_color_btn: "var(--color-text-btn)",
+        text_color_secondary: "var(--text-color-secondary)",
+        background_color_btn: "var(--color-btn)",
+        text_color_btn: "var(--text-btn)",
         radio_btn_checked: "var(--color-radio-btn-checked)",
         radio_btn_unchecked: "var(--color-radio-btn-unchecked)",
       },
