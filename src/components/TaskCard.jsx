@@ -3,7 +3,6 @@ import moment from "moment";
 import Moment from "react-moment";
 
 //importing files...
-import { TASK_DESCRIPTION, TASK_TITLE } from "../constants";
 import { EditIcon, DeleteIcon, CustomRadioButton } from "./Icon";
 
 const TaskCard = () => {
@@ -32,13 +31,13 @@ const TaskCard = () => {
         </div>
         <div className="flex-1">
           <div style={{ fontSize: "20px" }} className="font-bold">
-            {TASK_TITLE}
+          Task 1
           </div>
           <div
             style={{ fontSize: "16px" }}
             className="text-gray-600 font-inter"
           >
-            {TASK_DESCRIPTION}
+            Short description about task
           </div>
           <div
             style={{ fontSize: "12px" }}
