@@ -1,5 +1,8 @@
 //importing files...
 import api from "./axiosConfig";
+import {v4 as uuidv4} from 'uuid';
+
+
 
 //UTILITY FUNCTION
 /**
@@ -46,6 +49,15 @@ const removeId = (data) => {
 
   return rest;
 };
+
+export const generateUUIDS = (count) => {
+  const uuids = [];
+
+  for (let i = 0; i < count; i++) {
+      uuids.push(uuidv4());
+  }
+  return uuids;
+}
 
 //GET ENDPOINTS
 /**
