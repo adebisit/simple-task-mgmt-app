@@ -7,6 +7,7 @@ import Search from "../components/Search";
 import TaskCard from "../components/TaskCard";
 import AddTaskButton from "../components/AddTaskButton";
 import SeeMoreLink from "../components/SeeMoreLink";
+import AddTaskForm from "../forms/AddTaskForm";
 
 function HomePage() {
   return (
@@ -14,7 +15,7 @@ function HomePage() {
       <Navbar />
       <Search />
       <TaskCard />
-      <AddTaskButton />
+      <AddTaskButton onClick={AddTaskForm} />
       <SeeMoreLink/>
     </div>
   );
