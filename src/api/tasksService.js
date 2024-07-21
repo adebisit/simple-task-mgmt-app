@@ -83,13 +83,9 @@ export const getTask = async (taskId) => {
  * @returns {Promise<Array>} An array of tasks
  */
 export const getAllSubTasks = async (taskId) => {
-  try {
-    const res = await api.get(`/tasks/${taskId}`);
-    return res.data.subtasks;
-  } catch (err) {
-    console.error("Error getting subtasks: ", err);
-    throw err;
-  }
+  const task = getTask()
+  return task.subtasks
+
 };
 
 /**
