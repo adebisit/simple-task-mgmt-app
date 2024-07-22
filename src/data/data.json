@@ -45,7 +45,7 @@
       "completedAt": "2024-06-25T09:00:00.000Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Prepare for Harvest",
       "description": "Get all necessary equipment and logistics ready for the upcoming harvest season.",
       "dueDate": "2024-07-05T17:00:00.000Z",
@@ -164,7 +164,7 @@
           "createdAt": "2024-07-02T08:00:00.000Z"
         },
         {
-          "note":  "Ensure all sources are properly cited to avoid plagiarism.",
+          "note": "Ensure all sources are properly cited to avoid plagiarism.",
           "createdAt": "2024-07-03T09:00:00.000Z"
         },
         {
@@ -336,11 +336,11 @@
       ],
       "notes": [
         {
-          "note":  "Check for any travel restrictions or requirements for the destination.",
+          "note": "Check for any travel restrictions or requirements for the destination.",
           "createdAt": "2024-07-02T08:00:00.000Z"
         },
         {
-          "note":  "Ensure all travel documents, including passports and visas, are up to date.",
+          "note": "Ensure all travel documents, including passports and visas, are up to date.",
           "createdAt": "2024-07-03T09:00:00.000Z"
         },
         {
