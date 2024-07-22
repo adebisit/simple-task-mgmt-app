@@ -6,7 +6,6 @@ import radioButtonOff from "@iconify/icons-ion/radio-button-off";
 import radioButtonOn from "@iconify/icons-ion/radio-button-on";
 import plusLight from "@iconify-icons/ph/plus-light";
 import funnelOutline from "@iconify/icons-ion/funnel-outline";
-import closeIcon from '@iconify-icons/mdi/close';
 
 const EditIcon = () => <Icon icon={editIcon} className="cursor-pointer" />;
 
@@ -32,9 +31,16 @@ const SortIcon = () => {
       <Icon icon="ic:sharp-keyboard-double-arrow-down" height="20" width="20" />
     </div>
   );
-}; 
+};
 const CloseIcon = () => {
-  return <Icon icon={closeIcon} className="h-6 w-6" />;
+  return (
+    <button>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 1L1 13M1 1L13 13" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+
+    </button>
+  );
 };
 
 
