@@ -6,43 +6,6 @@
       "description": "Create a comprehensive lesson plan for the upcoming semester.",
       "dueDate": "2024-07-15T23:59:59.000Z",
       "priority": 5,
-      "subtasks": [
-        {
-          "id": "7f958a1a-42d2-43e3-96a3-0c9f620eece3",
-          "name": "Research Curriculum",
-          "description": "Review and analyze the curriculum to identify key topics.",
-          "completedAt": null
-        },
-        {
-          "id": "6d510788-774b-4f2d-9cea-e33f594d69d5",
-          "name": "Draft Weekly Plans",
-          "description": "Create a draft plan for each week's lessons.",
-          "completedAt": null
-        },
-        {
-          "id": "86a22bd2-6296-4b95-a3ac-c2c690652406",
-          "name": "Create Assessment Materials",
-          "description": "Design quizzes and tests for student evaluations.",
-          "completedAt": null
-        }
-      ],
-      "notes": [
-        {
-          "id": "e40c2f43-9930-4684-93cf-f86c1df621ac",
-          "note": "Ensure all lesson plans align with the updated curriculum guidelines.",
-          "createdAt": "2024-07-02T08:00:00.000Z"
-        },
-        {
-          "id": "9d76cb03-cafe-402a-a605-c9c508e3b7a3",
-          "note": "Incorporate feedback from previous semesters to improve the lesson structure.",
-          "createdAt": "2024-07-03T09:00:00.000Z"
-        },
-        {
-          "id": "55d192a4-b15a-4cb5-a690-fb9990416a86",
-          "note": "Allocate time for interactive activities and student engagement.",
-          "createdAt": "2024-07-04T10:00:00.000Z"
-        }
-      ],
       "createdAt": "2024-06-25T09:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
       "completedAt": "2024-06-25T09:00:00.000Z"
@@ -53,43 +16,6 @@
       "description": "Get all necessary equipment and logistics ready for the upcoming harvest season.",
       "dueDate": "2024-07-05T17:00:00.000Z",
       "priority": 5,
-      "subtasks": [
-        {
-          "id": "72cf4368-e363-4e89-bcdc-f223c4c9bde8",
-          "name": "Inspect Equipment",
-          "description": "Check all harvesting machinery and tools for functionality.",
-          "completedAt": null
-        },
-        {
-          "id": "0af96a36-4c12-4f1c-809a-d941ad2bc41a",
-          "name": "Hire Seasonal Workers",
-          "description": "Recruit and hire temporary workers for the harvest period.",
-          "completedAt": null
-        },
-        {
-          "id": "60ce448d-7c76-421b-919a-467abfb726a5",
-          "name": "Set Up Storage Facilities",
-          "description": "Prepare storage areas for harvested crops.",
-          "completedAt": null
-        }
-      ],
-      "notes": [
-        {
-          "id": "0a043512-462d-4f59-9642-f58279a14910",
-          "note": "Coordinate with suppliers to ensure timely delivery of spare parts for machinery.",
-          "createdAt": "2024-07-02T08:00:00.000Z"
-        },
-        {
-          "id": "b37bc4c4-86d4-45d0-9e10-d65a507f0da3",
-          "note": "Confirm availability of seasonal workers and verify their work permits.",
-          "createdAt": "2024-07-03T09:00:00.000Z"
-        },
-        {
-          "id": "14d55bff-2c6a-4879-872e-08aeb45facd3",
-          "note": "Schedule a final walkthrough of storage facilities to ensure they meet safety standards.",
-          "createdAt": "2024-07-04T10:00:00.000Z"
-        }
-      ],
       "createdAt": "2024-06-20T08:00:00.000Z",
       "updatedAt": "2024-07-04T16:30:00.000Z",
       "completedAt": "2024-07-04T16:30:00.000Z"
@@ -100,43 +26,6 @@
       "description": "Plan and execute the kitchen renovation project.",
       "dueDate": "2024-07-20T23:59:59.000Z",
       "priority": 3,
-      "subtasks": [
-        {
-          "id": "802beb9f-f6c5-4e3a-bc4b-300949d864d5",
-          "name": "Hire Contractor",
-          "description": "Find and hire a reputable contractor for the renovation.",
-          "completedAt": null
-        },
-        {
-          "id": "b9ca9213-eb0a-4479-a032-fa021db897ed",
-          "name": "Select Materials",
-          "description": "Choose the materials and finishes for the kitchen.",
-          "completedAt": null
-        },
-        {
-          "id": "2fdcd1e6-9fcd-481c-9908-e03ad02de3b8",
-          "name": "Approve Design",
-          "description": "Review and approve the final kitchen design.",
-          "completedAt": null
-        }
-      ],
-      "notes": [
-        {
-          "id": "a7971c02-5e31-4f1a-96d4-fb1f5c9eded6",
-          "note": "Ensure to get multiple quotes from contractors to find the best deal.",
-          "createdAt": "2024-07-02T08:00:00.000Z"
-        },
-        {
-          "id": "f7ab5074-0402-49c9-be51-84f3e128f2f7",
-          "note": "Consider energy-efficient appliances and sustainable materials.",
-          "createdAt": "2024-07-03T09:00:00.000Z"
-        },
-        {
-          "id": "24f9041b-9feb-4ed2-9090-b1faba4a93a7",
-          "note": "Create a temporary kitchen setup during the renovation period.",
-          "createdAt": "2024-07-04T10:00:00.000Z"
-        }
-      ],
       "createdAt": "2024-06-30T11:00:00.000Z",
       "updatedAt": "2024-06-30T11:00:00.000Z",
       "completedAt": "2024-06-30T11:00:00.000Z"
@@ -147,43 +36,6 @@
       "description": " Write and submit the final research paper for the semester.",
       "dueDate": "2024-07-25T18:00:00.000Z",
       "priority": 2,
-      "subtasks": [
-        {
-          "id": "d9e5b982-31c0-4b12-b91e-8e41b1a5fca6",
-          "name": "Gather Sources",
-          "description": "Collect and organize all necessary research materials.",
-          "completedAt": null
-        },
-        {
-          "id": "5775de62-d8c9-4c76-b8ce-b77e92e2a9b6",
-          "name": "Draft Outline",
-          "description": "Create an outline to structure the paper.",
-          "completedAt": null
-        },
-        {
-          "id": "0e019814-5812-415b-bf62-1acdbcd5e1ad",
-          "name": "Write First Draft",
-          "description": "Write the initial draft of the research paper.",
-          "completedAt": null
-        }
-      ],
-      "notes": [
-        {
-          "id": "5f8eaa99-1c58-4dda-abf2-0f1e07a13275",
-          "note": "Schedule regular check-ins with your advisor to get feedback on your progress.",
-          "createdAt": "2024-07-02T08:00:00.000Z"
-        },
-        {
-          "id": "7b10cdc9-0db0-47dc-8e7a-8dddc6c1985d",
-          "note": "Ensure all sources are properly cited to avoid plagiarism.",
-          "createdAt": "2024-07-03T09:00:00.000Z"
-        },
-        {
-          "id": "6e2707d0-32c2-4219-bc80-50c8630f1860",
-          "note": "Allow time for multiple revisions and proofreading.",
-          "createdAt": "2024-07-04T10:00:00.000Z"
-        }
-      ],
       "createdAt": "2024-06-28T14:00:00.000Z",
       "updatedAt": "2024-07-01T13:30:00.000Z",
       "completedAt": "2024-07-01T13:30:00.000Z"
@@ -194,43 +46,6 @@
       "description": "Plan and arrange the quarterly team meeting.",
       "dueDate": "2024-08-01T23:59:59.000Z",
       "priority": 1,
-      "subtasks": [
-        {
-          "id": "aa24df7e-2a05-4826-bdc0-74260bfa064f",
-          "name": "Book Conference Room",
-          "description": "Reserve a suitable conference room for the meeting.",
-          "completedAt": null
-        },
-        {
-          "id": "b4d9b9e7-1fb8-4cef-b496-2720b42e90e7",
-          "name": "Prepare Agenda",
-          "description": "Create a detailed agenda for the meeting.",
-          "completedAt": null
-        },
-        {
-          "id": "4736dc39-21ce-476c-a899-77823a0d6660",
-          "name": "Send Invites",
-          "description": "Send out meeting invitations to all team members.",
-          "completedAt": null
-        }
-      ],
-      "notes": [
-        {
-          "id": "b93b9413-a731-4bfc-af38-a14de9500a95",
-          "note": "Confirm the availability of key team members before finalizing the meeting date.",
-          "createdAt": "2024-07-02T08:00:00.000Z"
-        },
-        {
-          "id": "3cbff415-59d9-4606-8d82-05de2508573b",
-          "note": "Distribute the agenda in advance to allow team members to prepare.",
-          "createdAt": "2024-07-03T09:00:00.000Z"
-        },
-        {
-          "id": "15faa658-b42e-4bc3-8bd9-f7ef7a35c383",
-          "note": "Arrange for any necessary audiovisual equipment.",
-          "createdAt": "2024-07-04T10:00:00.000Z"
-        }
-      ],
       "createdAt": "2024-07-01T10:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
       "completedAt": "2024-07-01T10:00:00.000Z"
@@ -241,43 +56,6 @@
       "description": "Organize a birthday party for the child.",
       "dueDate": "2024-08-01T23:59:59.000Z",
       "priority": 1,
-      "subtasks": [
-        {
-          "id": "e810f0d4-ed12-4fee-8073-a2056dadbe39",
-          "name": "Create Guest List",
-          "description": "List all guests to be invited to the party.",
-          "completedAt": null
-        },
-        {
-          "id": "cb80f18d-ab92-4797-a3fd-836f90f11a73",
-          "name": "Order Cake",
-          "description": "Select and order a birthday cake.",
-          "completedAt": null
-        },
-        {
-          "id": "f490bcf7-be7a-4e84-bbd1-78e323345b5e",
-          "name": "Book Venue",
-          "description": "Reserve a venue for the birthday party.",
-          "completedAt": null
-        }
-      ],
-      "notes": [
-        {
-          "id": "4664602a-1952-4bf4-9013-adb62837bf65",
-          "note": "Reach out to parents for dietary restrictions or allergies for the guests.",
-          "createdAt": "2024-07-02T08:00:00.000Z"
-        },
-        {
-          "id": "8d655a20-f250-4c7b-b6c8-78ad5287d3e1",
-          "note": "Plan fun activities and games for the children.",
-          "createdAt": "2024-07-03T09:00:00.000Z"
-        },
-        {
-          "id": "adbfff6c-0745-439e-98c5-f11ff956b318",
-          "note": "Ensure there is a backup plan in case of bad weather if the party is outdoors.",
-          "createdAt": "2024-07-04T10:00:00.000Z"
-        }
-      ],
       "createdAt": "2024-07-01T10:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
       "completedAt": "2024-07-01T10:00:00.000Z"
@@ -288,43 +66,6 @@
       "description": "Develop and initiate a marketing campaign for the new product.",
       "dueDate": "2024-08-01T23:59:59.000Z",
       "priority": 1,
-      "subtasks": [
-        {
-          "id": "a3d772af-8994-49d2-b0bb-424af679ecab",
-          "name": "Design Ads",
-          "description": "Create advertisements for the campaign.",
-          "completedAt": null
-        },
-        {
-          "id": "a2c880b9-177b-4643-92ac-f09efc4e6935",
-          "name": "Select Platforms",
-          "description": "Choose platforms for running the ads.",
-          "completedAt": null
-        },
-        {
-          "id": "cbe47009-25d2-4738-8fbb-62cb538e8486",
-          "name": "Set Budget",
-          "description": "Determine the budget for the campaign.",
-          "completedAt": null
-        }
-      ],
-      "notes": [
-        {
-          "id": "e649c7c4-cbaf-494a-9bac-de7ee0929a60",
-          "note": "Analyze competitor campaigns for insights on effective strategies.",
-          "createdAt": "2024-07-02T08:00:00.000Z"
-        },
-        {
-          "id": "914d82ef-bfff-48cd-8794-dda27d45ea9e",
-          "note": "Track and measure the performance of the campaign.",
-          "createdAt": "2024-07-03T09:00:00.000Z"
-        },
-        {
-          "id": "f9ba162e-319d-4487-a96b-0091a3474f0f",
-          "note": "Allocate a portion of the budget for A/B testing.",
-          "createdAt": "2024-07-04T10:00:00.000Z"
-        }
-      ],
       "createdAt": "2024-07-01T10:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
       "completedAt": "2024-07-01T10:00:00.000Z"
@@ -335,46 +76,325 @@
       "description": "Organize all aspects of the upcoming vacation.",
       "dueDate": "2024-08-01T23:59:59.000Z",
       "priority": 1,
-      "subtasks": [
-        {
-          "id": "f2d14606-b582-447d-9544-6c2131feb17c",
-          "name": "Book Flights",
-          "description": "Purchase flight tickets for the trip.",
-          "completedAt": null
-        },
-        {
-          "id": "e7b065c4-e24a-4a90-9a99-fcb0181caa7f",
-          "name": "Reserve Accommodations",
-          "description": "Book hotels or other accommodations.",
-          "completedAt": null
-        },
-        {
-          "id": "8a9cf3e2-6815-4d52-a7ae-cc21c879b27b",
-          "name": "Create Itinerary",
-          "description": "Plan daily activities and sightseeing.",
-          "completedAt": null
-        }
-      ],
-      "notes": [
-        {
-          "id": "74ddfdef-0cbe-4525-8084-d0a4cb510e2c",
-          "note": "Check for any travel restrictions or requirements for the destination.",
-          "createdAt": "2024-07-02T08:00:00.000Z"
-        },
-        {
-          "id": "14db586c-d9fa-4fdb-ba96-8816111d4939",
-          "note": "Ensure all travel documents, including passports and visas, are up to date.",
-          "createdAt": "2024-07-03T09:00:00.000Z"
-        },
-        {
-          "id": "778dec43-2e8a-4b13-834a-ac7c2f69f872",
-          "note": "Research local attractions and make reservations for popular activities in advance.",
-          "createdAt": "2024-07-04T10:00:00.000Z"
-        }
-      ],
       "createdAt": "2024-07-01T10:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
       "completedAt": "2024-07-01T10:00:00.000Z"
+    }
+  ],
+  "subtasks": [
+    {
+      "id": "7f958a1a-42d2-43e3-96a3-0c9f620eece3",
+      "name": "Research Curriculum",
+      "description": "Review and analyze the curriculum to identify key topics.",
+      "completedAt": null,
+      "taskId": "993211cd-561f-4776-9f57-545886c09284"
+    },
+    {
+      "id": "6d510788-774b-4f2d-9cea-e33f594d69d5",
+      "name": "Draft Weekly Plans",
+      "description": "Create a draft plan for each week's lessons.",
+      "completedAt": null,
+      "taskId": "993211cd-561f-4776-9f57-545886c09284"
+    },
+    {
+      "id": "86a22bd2-6296-4b95-a3ac-c2c690652406",
+      "name": "Create Assessment Materials",
+      "description": "Design quizzes and tests for student evaluations.",
+      "completedAt": null,
+      "taskId": "993211cd-561f-4776-9f57-545886c09284"
+    },
+    {
+      "id": "72cf4368-e363-4e89-bcdc-f223c4c9bde8",
+      "name": "Inspect Equipment",
+      "description": "Check all harvesting machinery and tools for functionality.",
+      "completedAt": null,
+      "taskId": "b382c14f-9722-404a-85e2-35882086b6ab"
+    },
+    {
+      "id": "0af96a36-4c12-4f1c-809a-d941ad2bc41a",
+      "name": "Hire Seasonal Workers",
+      "description": "Recruit and hire temporary workers for the harvest period.",
+      "completedAt": null,
+      "taskId": "b382c14f-9722-404a-85e2-35882086b6ab"
+    },
+    {
+      "id": "60ce448d-7c76-421b-919a-467abfb726a5",
+      "name": "Set Up Storage Facilities",
+      "description": "Prepare storage areas for harvested crops.",
+      "completedAt": null,
+      "taskId": "b382c14f-9722-404a-85e2-35882086b6ab"
+    },
+    {
+      "id": "802beb9f-f6c5-4e3a-bc4b-300949d864d5",
+      "name": "Hire Contractor",
+      "description": "Find and hire a reputable contractor for the renovation.",
+      "completedAt": null,
+      "taskId": "c51562b9-7d97-42de-b24e-9f4666c67149"
+    },
+    {
+      "id": "b9ca9213-eb0a-4479-a032-fa021db897ed",
+      "name": "Select Materials",
+      "description": "Choose the materials and finishes for the kitchen.",
+      "completedAt": null,
+      "taskId": "c51562b9-7d97-42de-b24e-9f4666c67149"
+    },
+    {
+      "id": "2fdcd1e6-9fcd-481c-9908-e03ad02de3b8",
+      "name": "Approve Design",
+      "description": "Review and approve the final kitchen design.",
+      "completedAt": null,
+      "taskId": "c51562b9-7d97-42de-b24e-9f4666c67149"
+    },
+    {
+      "id": "d9e5b982-31c0-4b12-b91e-8e41b1a5fca6",
+      "name": "Gather Sources",
+      "description": "Collect and organize all necessary research materials.",
+      "completedAt": null,
+      "taskId": "9b5b47b1-9dd3-4ab9-bd1a-d016e47de500"
+    },
+    {
+      "id": "5775de62-d8c9-4c76-b8ce-b77e92e2a9b6",
+      "name": "Draft Outline",
+      "description": "Create an outline to structure the paper.",
+      "completedAt": null,
+      "taskId": "9b5b47b1-9dd3-4ab9-bd1a-d016e47de500"
+    },
+    {
+      "id": "0e019814-5812-415b-bf62-1acdbcd5e1ad",
+      "name": "Write First Draft",
+      "description": "Write the initial draft of the research paper.",
+      "completedAt": null,
+      "taskId": "9b5b47b1-9dd3-4ab9-bd1a-d016e47de500"
+    },
+    {
+      "id": "aa24df7e-2a05-4826-bdc0-74260bfa064f",
+      "name": "Book Conference Room",
+      "description": "Reserve a suitable conference room for the meeting.",
+      "completedAt": null,
+      "taskId": "5566f88d-c123-4417-83a9-525fcd381bf8"
+    },
+    {
+      "id": "b4d9b9e7-1fb8-4cef-b496-2720b42e90e7",
+      "name": "Prepare Agenda",
+      "description": "Create a detailed agenda for the meeting.",
+      "completedAt": null,
+      "taskId": "5566f88d-c123-4417-83a9-525fcd381bf8"
+    },
+    {
+      "id": "4736dc39-21ce-476c-a899-77823a0d6660",
+      "name": "Send Invites",
+      "description": "Send out meeting invitations to all team members.",
+      "completedAt": null,
+      "taskId": "5566f88d-c123-4417-83a9-525fcd381bf8"
+    },
+    {
+      "id": "e810f0d4-ed12-4fee-8073-a2056dadbe39",
+      "name": "Create Guest List",
+      "description": "List all guests to be invited to the party.",
+      "completedAt": null,
+      "taskId": "b26a761b-0873-4735-a664-edcbd177acca"
+    },
+    {
+      "id": "cb80f18d-ab92-4797-a3fd-836f90f11a73",
+      "name": "Order Cake",
+      "description": "Select and order a birthday cake.",
+      "completedAt": null,
+      "taskId": "b26a761b-0873-4735-a664-edcbd177acca"
+    },
+    {
+      "id": "f490bcf7-be7a-4e84-bbd1-78e323345b5e",
+      "name": "Book Venue",
+      "description": "Reserve a venue for the birthday party.",
+      "completedAt": null,
+      "taskId": "b26a761b-0873-4735-a664-edcbd177acca"
+    },
+    {
+      "id": "a3d772af-8994-49d2-b0bb-424af679ecab",
+      "name": "Design Ads",
+      "description": "Create advertisements for the campaign.",
+      "completedAt": null,
+      "taskId": "a8de347f-3e47-4ccb-b036-599edc9991ec"
+    },
+    {
+      "id": "a2c880b9-177b-4643-92ac-f09efc4e6935",
+      "name": "Select Platforms",
+      "description": "Choose platforms for running the ads.",
+      "completedAt": null,
+      "taskId": "a8de347f-3e47-4ccb-b036-599edc9991ec"
+    },
+    {
+      "id": "cbe47009-25d2-4738-8fbb-62cb538e8486",
+      "name": "Set Budget",
+      "description": "Determine the budget for the campaign.",
+      "completedAt": null,
+      "taskId": "a8de347f-3e47-4ccb-b036-599edc9991ec"
+    },
+    {
+      "id": "f2d14606-b582-447d-9544-6c2131feb17c",
+      "name": "Book Flights",
+      "description": "Purchase flight tickets for the trip.",
+      "completedAt": null,
+      "taskId": "30e23f42-ec2c-4369-95e9-09b9a7019b3e"
+    },
+    {
+      "id": "e7b065c4-e24a-4a90-9a99-fcb0181caa7f",
+      "name": "Reserve Accommodations",
+      "description": "Book hotels or other accommodations.",
+      "completedAt": null,
+      "taskId": "30e23f42-ec2c-4369-95e9-09b9a7019b3e"
+    },
+    {
+      "id": "8a9cf3e2-6815-4d52-a7ae-cc21c879b27b",
+      "name": "Create Itinerary",
+      "description": "Plan daily activities and sightseeing.",
+      "completedAt": null,
+      "taskId": "30e23f42-ec2c-4369-95e9-09b9a7019b3e"
+    }
+  ],
+  "notes": [
+    {
+      "id": "e40c2f43-9930-4684-93cf-f86c1df621ac",
+      "note": "Ensure all lesson plans align with the updated curriculum guidelines.",
+      "createdAt": "2024-07-02T08:00:00.000Z",
+      "taskId": "993211cd-561f-4776-9f57-545886c09284"
+    },
+    {
+      "id": "9d76cb03-cafe-402a-a605-c9c508e3b7a3",
+      "note": "Incorporate feedback from previous semesters to improve the lesson structure.",
+      "createdAt": "2024-07-03T09:00:00.000Z",
+      "taskId": "993211cd-561f-4776-9f57-545886c09284"
+    },
+    {
+      "id": "55d192a4-b15a-4cb5-a690-fb9990416a86",
+      "note": "Allocate time for interactive activities and student engagement.",
+      "createdAt": "2024-07-04T10:00:00.000Z",
+      "taskId": "993211cd-561f-4776-9f57-545886c09284"
+    },
+    {
+      "id": "0a043512-462d-4f59-9642-f58279a14910",
+      "note": "Coordinate with suppliers to ensure timely delivery of spare parts for machinery.",
+      "createdAt": "2024-07-02T08:00:00.000Z",
+      "taskId": "b382c14f-9722-404a-85e2-35882086b6ab"
+    },
+    {
+      "id": "b37bc4c4-86d4-45d0-9e10-d65a507f0da3",
+      "note": "Confirm availability of seasonal workers and verify their work permits.",
+      "createdAt": "2024-07-03T09:00:00.000Z",
+      "taskId": "b382c14f-9722-404a-85e2-35882086b6ab"
+    },
+    {
+      "id": "14d55bff-2c6a-4879-872e-08aeb45facd3",
+      "note": "Schedule a final walkthrough of storage facilities to ensure they meet safety standards.",
+      "createdAt": "2024-07-04T10:00:00.000Z",
+      "taskId": "b382c14f-9722-404a-85e2-35882086b6ab"
+    },
+    {
+      "id": "a7971c02-5e31-4f1a-96d4-fb1f5c9eded6",
+      "note": "Ensure to get multiple quotes from contractors to find the best deal.",
+      "createdAt": "2024-07-02T08:00:00.000Z",
+      "taskId": "c51562b9-7d97-42de-b24e-9f4666c67149"
+    },
+    {
+      "id": "f7ab5074-0402-49c9-be51-84f3e128f2f7",
+      "note": "Consider energy-efficient appliances and sustainable materials.",
+      "createdAt": "2024-07-03T09:00:00.000Z",
+      "taskId": "c51562b9-7d97-42de-b24e-9f4666c67149"
+    },
+    {
+      "id": "24f9041b-9feb-4ed2-9090-b1faba4a93a7",
+      "note": "Create a temporary kitchen setup during the renovation period.",
+      "createdAt": "2024-07-04T10:00:00.000Z",
+      "taskId": "c51562b9-7d97-42de-b24e-9f4666c67149"
+    },
+    {
+      "id": "5f8eaa99-1c58-4dda-abf2-0f1e07a13275",
+      "note": "Schedule regular check-ins with your advisor to get feedback on your progress.",
+      "createdAt": "2024-07-02T08:00:00.000Z",
+      "taskId": "9b5b47b1-9dd3-4ab9-bd1a-d016e47de500"
+    },
+    {
+      "id": "7b10cdc9-0db0-47dc-8e7a-8dddc6c1985d",
+      "note": "Ensure all sources are properly cited to avoid plagiarism.",
+      "createdAt": "2024-07-03T09:00:00.000Z",
+      "taskId": "9b5b47b1-9dd3-4ab9-bd1a-d016e47de500"
+    },
+    {
+      "id": "6e2707d0-32c2-4219-bc80-50c8630f1860",
+      "note": "Allow time for multiple revisions and proofreading.",
+      "createdAt": "2024-07-04T10:00:00.000Z",
+      "taskId": "9b5b47b1-9dd3-4ab9-bd1a-d016e47de500"
+    },
+    {
+      "id": "b93b9413-a731-4bfc-af38-a14de9500a95",
+      "note": "Confirm the availability of key team members before finalizing the meeting date.",
+      "createdAt": "2024-07-02T08:00:00.000Z",
+      "taskId": "5566f88d-c123-4417-83a9-525fcd381bf8"
+    },
+    {
+      "id": "3cbff415-59d9-4606-8d82-05de2508573b",
+      "note": "Distribute the agenda in advance to allow team members to prepare.",
+      "createdAt": "2024-07-03T09:00:00.000Z",
+      "taskId": "5566f88d-c123-4417-83a9-525fcd381bf8"
+    },
+    {
+      "id": "15faa658-b42e-4bc3-8bd9-f7ef7a35c383",
+      "note": "Arrange for any necessary audiovisual equipment.",
+      "createdAt": "2024-07-04T10:00:00.000Z",
+      "taskId": "5566f88d-c123-4417-83a9-525fcd381bf8"
+    },
+    {
+      "id": "4664602a-1952-4bf4-9013-adb62837bf65",
+      "note": "Reach out to parents for dietary restrictions or allergies for the guests.",
+      "createdAt": "2024-07-02T08:00:00.000Z",
+      "taskId": "b26a761b-0873-4735-a664-edcbd177acca"
+    },
+    {
+      "id": "8d655a20-f250-4c7b-b6c8-78ad5287d3e1",
+      "note": "Plan fun activities and games for the children.",
+      "createdAt": "2024-07-03T09:00:00.000Z",
+      "taskId": "b26a761b-0873-4735-a664-edcbd177acca"
+    },
+    {
+      "id": "adbfff6c-0745-439e-98c5-f11ff956b318",
+      "note": "Ensure there is a backup plan in case of bad weather if the party is outdoors.",
+      "createdAt": "2024-07-04T10:00:00.000Z",
+      "taskId": "b26a761b-0873-4735-a664-edcbd177acca"
+    },
+    {
+      "id": "e649c7c4-cbaf-494a-9bac-de7ee0929a60",
+      "note": "Analyze competitor campaigns for insights on effective strategies.",
+      "createdAt": "2024-07-02T08:00:00.000Z",
+      "taskId": "a8de347f-3e47-4ccb-b036-599edc9991ec"
+    },
+    {
+      "id": "914d82ef-bfff-48cd-8794-dda27d45ea9e",
+      "note": "Track and measure the performance of the campaign.",
+      "createdAt": "2024-07-03T09:00:00.000Z",
+      "taskId": "a8de347f-3e47-4ccb-b036-599edc9991ec"
+    },
+    {
+      "id": "f9ba162e-319d-4487-a96b-0091a3474f0f",
+      "note": "Allocate a portion of the budget for A/B testing.",
+      "createdAt": "2024-07-04T10:00:00.000Z",
+      "taskId": "a8de347f-3e47-4ccb-b036-599edc9991ec"
+    },
+    {
+      "id": "74ddfdef-0cbe-4525-8084-d0a4cb510e2c",
+      "note": "Check for any travel restrictions or requirements for the destination.",
+      "createdAt": "2024-07-02T08:00:00.000Z",
+      "taskId": "30e23f42-ec2c-4369-95e9-09b9a7019b3e"
+    },
+    {
+      "id": "14db586c-d9fa-4fdb-ba96-8816111d4939",
+      "note": "Ensure all travel documents, including passports and visas, are up to date.",
+      "createdAt": "2024-07-03T09:00:00.000Z",
+      "taskId": "30e23f42-ec2c-4369-95e9-09b9a7019b3e"
+    },
+    {
+      "id": "778dec43-2e8a-4b13-834a-ac7c2f69f872",
+      "note": "Research local attractions and make reservations for popular activities in advance.",
+      "createdAt": "2024-07-04T10:00:00.000Z",
+      "taskId": "30e23f42-ec2c-4369-95e9-09b9a7019b3e"
     }
   ]
 }
