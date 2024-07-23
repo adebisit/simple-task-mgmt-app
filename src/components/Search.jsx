@@ -3,7 +3,7 @@ import React from "react";
 
 //importing files...
 import { FilterIcon, SortIcon } from "./Icon.jsx";
-import { SEARCH_PLACEHOLDER_TEXT } from "../constants.js";
+
 
 const Search = () => {
   return (
@@ -12,7 +12,7 @@ const Search = () => {
         <input
           id="search"
           type="text"
-          placeholder={SEARCH_PLACEHOLDER_TEXT}
+          placeholder="Search tasks..."
           className="border border-2 border-gray-300 rounded-lg p-2 w-full"
         />
       </div>
