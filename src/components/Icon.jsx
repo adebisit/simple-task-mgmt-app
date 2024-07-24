@@ -85,4 +85,16 @@ const SortIcon = () => {
     </svg>
   );
 };
-export { EditIcon, DeleteIcon, FilterIcon, SortIcon };
+
+const CustomRadioButton = ({isIconChecked}) => {
+  return (
+            <div
+              className={
+                "custom-radio-button relative flex items-center justify-center"
+              }
+            >
+              {isIconChecked && <div className="inner-container"></div>}
+            </div>
+  );
+}
+export { EditIcon, DeleteIcon, FilterIcon, SortIcon, CustomRadioButton };
