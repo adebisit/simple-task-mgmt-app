@@ -4,7 +4,7 @@ import Moment from "react-moment";
 import "../index";
 //importing files...
 import { TASK_DESCRIPTION, TASK_TITLE } from "../constants";
-import { DeleteIcon, EditIcon } from "./Icon";
+import { CustomRadioButton, DeleteIcon, EditIcon } from "./Icon";
 
 const TaskCard = () => {
   const [isIconChecked, setIsIconChecked] = useState(false);
@@ -20,13 +20,8 @@ const TaskCard = () => {
     <>
       <div className="flex flex-row items-start mt-4 mb-4 w-full items-center">
         <div className="mr-4 cursor-pointer text-2xl">
-          <button
-            onClick={handleCheckIconClick}
-            className={
-              "custom-radio-button relative flex items-center justify-center"
-            }
-          >
-            {isIconChecked && <div className="inner-container"></div>}
+          <button onClick={handleCheckIconClick}>
+            <CustomRadioButton isIconChecked={isIconChecked} />
           </button>
         </div>
         <div className="flex-1">
