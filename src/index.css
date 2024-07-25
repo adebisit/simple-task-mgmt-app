@@ -20,8 +20,6 @@
   }
 
   .custom-radio-button {
-    width: 32px;
-    height: 32px;
     border-radius: 50%;
     border: 2px solid #3b3b3b;
     background-color: #fff;
@@ -32,8 +30,6 @@
   }
 
   .inner-container {
-    width: 16px;
-    height: 16px;
     border-radius: 50%;
     background-color: #808080;
     position: absolute;
