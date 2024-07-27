@@ -79,6 +79,124 @@
       "createdAt": "2024-07-01T10:00:00.000Z",
       "updatedAt": "2024-07-01T10:00:00.000Z",
       "completedAt": "2024-07-01T10:00:00.000Z"
+    },
+    {
+      "id": "dd73c753-9302-4847-be16-e4b42c7dcfee",
+      "name": "Updated Task",
+      "description": "This is an updated task",
+      "priority": 5,
+      "createdAt": "2024-07-27T09:46:54.191Z",
+      "updatedAt": "2024-07-27T09:46:54.343Z"
+    },
+    {
+      "id": "e7bd2a3d-77c6-4084-8fb2-3077afddc4ef",
+      "name": "Updated Task",
+      "description": "This is an updated task",
+      "priority": 4,
+      "createdAt": "2024-07-27T09:46:54.203Z",
+      "updatedAt": "2024-07-27T09:46:54.345Z"
+    },
+    {
+      "id": "64a9dc23-5be7-46dc-9992-505d23091588",
+      "name": "New Task",
+      "description": "This is a new task",
+      "priority": 5,
+      "createdAt": "2024-07-27T09:51:44.448Z"
+    },
+    {
+      "id": "065d133e-8a19-46b6-8a0b-790bf8aaab08",
+      "name": "New Task",
+      "description": "This is a new task",
+      "priority": 2,
+      "createdAt": "2024-07-27T09:51:44.455Z"
+    },
+    {
+      "id": "12df2dd1-44dd-495f-8959-f605153fe880",
+      "name": "New Task",
+      "description": "This is a new task",
+      "priority": 5,
+      "createdAt": "2024-07-27T09:52:33.658Z"
+    },
+    {
+      "id": "1473f442-77ea-4d78-aab4-0080f7ec8032",
+      "name": "New Task",
+      "description": "This is a new task",
+      "priority": 2,
+      "createdAt": "2024-07-27T09:52:33.661Z"
+    },
+    {
+      "id": "309efe53-c8a7-4135-aae5-17b3135bed8f",
+      "name": "New Task",
+      "description": "This is a new task",
+      "priority": 1,
+      "createdAt": "2024-07-27T09:52:41.392Z"
+    },
+    {
+      "id": "07566de7-39ab-4fcc-9ee9-08cb51b5a9c4",
+      "name": "New Task",
+      "description": "This is a new task",
+      "priority": 5,
+      "createdAt": "2024-07-27T09:52:41.402Z"
+    },
+    {
+      "id": "f9f042be-c3a8-4077-8195-1b17faa7bc41",
+      "name": "New Task",
+      "description": "This is a new task",
+      "priority": 1,
+      "createdAt": "2024-07-27T09:52:55.601Z"
+    },
+    {
+      "id": "c8867487-118f-41d7-849c-936cba203e9d",
+      "name": "New Task",
+      "description": "This is a new task",
+      "priority": 4,
+      "createdAt": "2024-07-27T09:52:55.604Z"
+    },
+    {
+      "id": "6b88955d-12cd-4ec8-a87e-807b43f54254",
+      "name": "New Task",
+      "description": "This is a new task",
+      "priority": 4,
+      "createdAt": "2024-07-27T09:52:59.306Z"
+    },
+    {
+      "id": "7c6d9b16-4ef8-4fdb-a5ce-7ae8bdf574e1",
+      "name": "New Task",
+      "description": "This is a new task",
+      "priority": 5,
+      "createdAt": "2024-07-27T09:52:59.311Z"
+    },
+    {
+      "id": "59867bf9-8a6f-4964-adc3-902633af22ca",
+      "name": "Updated Task",
+      "description": "This is an updated task",
+      "priority": 5,
+      "createdAt": "2024-07-27T09:53:15.998Z",
+      "updatedAt": "2024-07-27T09:53:16.071Z"
+    },
+    {
+      "id": "8b9b6cf7-0817-4950-80cb-71e14d304842",
+      "name": "Updated Task",
+      "description": "This is an updated task",
+      "priority": 2,
+      "createdAt": "2024-07-27T09:53:16.001Z",
+      "updatedAt": "2024-07-27T09:53:16.067Z"
+    },
+    {
+      "id": "b89a64ee-3101-4bb2-a6d7-8508cdb059be",
+      "name": "Updated Task",
+      "description": "This is an updated task",
+      "priority": 4,
+      "createdAt": "2024-07-27T09:54:02.062Z",
+      "updatedAt": "2024-07-27T09:54:02.164Z"
+    },
+    {
+      "id": "5c3e3198-1362-4e48-8e6c-6a1fede4579d",
+      "name": "Updated Task",
+      "description": "This is an updated task",
+      "priority": 4,
+      "createdAt": "2024-07-27T09:54:02.065Z",
+      "updatedAt": "2024-07-27T09:54:02.153Z"
     }
   ],
   "subtasks": [
@@ -87,6 +205,7 @@
       "name": "Research Curriculum",
       "description": "Review and analyze the curriculum to identify key topics.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T10:00:00.000Z",
       "taskId": "993211cd-561f-4776-9f57-545886c09284"
     },
     {
@@ -94,6 +213,7 @@
       "name": "Draft Weekly Plans",
       "description": "Create a draft plan for each week's lessons.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T10:00:00.000Z",
       "taskId": "993211cd-561f-4776-9f57-545886c09284"
     },
     {
@@ -101,6 +221,7 @@
       "name": "Create Assessment Materials",
       "description": "Design quizzes and tests for student evaluations.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T10:00:00.000Z",
       "taskId": "993211cd-561f-4776-9f57-545886c09284"
     },
     {
@@ -108,6 +229,7 @@
       "name": "Inspect Equipment",
       "description": "Check all harvesting machinery and tools for functionality.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T10:00:00.000Z",
       "taskId": "b382c14f-9722-404a-85e2-35882086b6ab"
     },
     {
@@ -115,6 +237,7 @@
       "name": "Hire Seasonal Workers",
       "description": "Recruit and hire temporary workers for the harvest period.",
       "completedAt": null,
+      "updatedAt": null,
       "taskId": "b382c14f-9722-404a-85e2-35882086b6ab"
     },
     {
@@ -122,6 +245,7 @@
       "name": "Set Up Storage Facilities",
       "description": "Prepare storage areas for harvested crops.",
       "completedAt": null,
+      "updatedAt": null,
       "taskId": "b382c14f-9722-404a-85e2-35882086b6ab"
     },
     {
@@ -129,6 +253,7 @@
       "name": "Hire Contractor",
       "description": "Find and hire a reputable contractor for the renovation.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T10:00:00.000Z",
       "taskId": "c51562b9-7d97-42de-b24e-9f4666c67149"
     },
     {
@@ -136,6 +261,7 @@
       "name": "Select Materials",
       "description": "Choose the materials and finishes for the kitchen.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T10:00:00.000Z",
       "taskId": "c51562b9-7d97-42de-b24e-9f4666c67149"
     },
     {
@@ -143,6 +269,7 @@
       "name": "Approve Design",
       "description": "Review and approve the final kitchen design.",
       "completedAt": null,
+      "updatedAt": null,
       "taskId": "c51562b9-7d97-42de-b24e-9f4666c67149"
     },
     {
@@ -150,6 +277,7 @@
       "name": "Gather Sources",
       "description": "Collect and organize all necessary research materials.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T10:00:00.000Z",
       "taskId": "9b5b47b1-9dd3-4ab9-bd1a-d016e47de500"
     },
     {
@@ -157,6 +285,7 @@
       "name": "Draft Outline",
       "description": "Create an outline to structure the paper.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T11:00:00.000Z",
       "taskId": "9b5b47b1-9dd3-4ab9-bd1a-d016e47de500"
     },
     {
@@ -164,6 +293,7 @@
       "name": "Write First Draft",
       "description": "Write the initial draft of the research paper.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T11:00:00.000Z",
       "taskId": "9b5b47b1-9dd3-4ab9-bd1a-d016e47de500"
     },
     {
@@ -171,6 +301,7 @@
       "name": "Book Conference Room",
       "description": "Reserve a suitable conference room for the meeting.",
       "completedAt": null,
+      "updatedAt": null,
       "taskId": "5566f88d-c123-4417-83a9-525fcd381bf8"
     },
     {
@@ -178,6 +309,7 @@
       "name": "Prepare Agenda",
       "description": "Create a detailed agenda for the meeting.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T08:00:00.000Z",
       "taskId": "5566f88d-c123-4417-83a9-525fcd381bf8"
     },
     {
@@ -185,6 +317,7 @@
       "name": "Send Invites",
       "description": "Send out meeting invitations to all team members.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T09:00:00.000Z",
       "taskId": "5566f88d-c123-4417-83a9-525fcd381bf8"
     },
     {
@@ -192,6 +325,7 @@
       "name": "Create Guest List",
       "description": "List all guests to be invited to the party.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T10:00:00.000Z",
       "taskId": "b26a761b-0873-4735-a664-edcbd177acca"
     },
     {
@@ -199,6 +333,7 @@
       "name": "Order Cake",
       "description": "Select and order a birthday cake.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T10:00:00.000Z",
       "taskId": "b26a761b-0873-4735-a664-edcbd177acca"
     },
     {
@@ -206,6 +341,7 @@
       "name": "Book Venue",
       "description": "Reserve a venue for the birthday party.",
       "completedAt": null,
+      "updatedAt": "2024-07-01T10:00:00.000Z",
       "taskId": "b26a761b-0873-4735-a664-edcbd177acca"
     },
     {
@@ -213,6 +349,7 @@
       "name": "Design Ads",
       "description": "Create advertisements for the campaign.",
       "completedAt": null,
+      "updatedAt": null,
       "taskId": "a8de347f-3e47-4ccb-b036-599edc9991ec"
     },
     {
@@ -220,6 +357,7 @@
       "name": "Select Platforms",
       "description": "Choose platforms for running the ads.",
       "completedAt": null,
+      "updatedAt": null,
       "taskId": "a8de347f-3e47-4ccb-b036-599edc9991ec"
     },
     {
@@ -227,6 +365,7 @@
       "name": "Set Budget",
       "description": "Determine the budget for the campaign.",
       "completedAt": null,
+      "updatedAt": null,
       "taskId": "a8de347f-3e47-4ccb-b036-599edc9991ec"
     },
     {
@@ -234,6 +373,7 @@
       "name": "Book Flights",
       "description": "Purchase flight tickets for the trip.",
       "completedAt": null,
+      "updatedAt": null,
       "taskId": "30e23f42-ec2c-4369-95e9-09b9a7019b3e"
     },
     {
@@ -241,6 +381,7 @@
       "name": "Reserve Accommodations",
       "description": "Book hotels or other accommodations.",
       "completedAt": null,
+      "updatedAt": null,
       "taskId": "30e23f42-ec2c-4369-95e9-09b9a7019b3e"
     },
     {
@@ -248,6 +389,7 @@
       "name": "Create Itinerary",
       "description": "Plan daily activities and sightseeing.",
       "completedAt": null,
+      "updatedAt": null,
       "taskId": "30e23f42-ec2c-4369-95e9-09b9a7019b3e"
     }
   ],
