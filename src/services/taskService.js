@@ -1,22 +1,36 @@
-//importing files...
-import api from "./axiosConfig";
+//importing node modules...
 import { v4 as uuidv4 } from "uuid";
 
+//importing files...
+import api from "./axiosConfig";
+import {
+  extractFilters,
+  applyFilters,
+  handleServerError,
+} from "./UtilityFunctions";
 
 //GET ENDPOINTS
 /**
- * getAllTasks - Asynchronous function that gets all tasks in the db
+ * getTasks - Asynchronous function that gets all tasks in the db
  * @param {object} queryParams: An object that contains the query parameters to retrieve tasks with
  *                              or defaults to an empty object
  * @returns {Promise<Array>} All tasks created
  */
-export const getAllTasks = async (queryParams = {}) => {
+export const getTasks = async (queryParams = {}) => {
   try {
+    const { likeFilters, dateFilters, remainingParams } =
+      extractFilters(queryParams);
+
     //Building the queryString...
-    const queryString = new URLSearchParams(queryParams).toString();
+    const queryString = new URLSearchParams(remainingParams).toString();
     const url = queryString ? `/tasks?${queryString}` : "/tasks";
+
+    //fetch data from db
     const res = await api.get(url);
-    return res.data;
+    handleServerError(res);
+    //filter data
+    const data = applyFilters(res.data, likeFilters, dateFilters);
+    return data;
   } catch (err) {
     console.error("Error retrieving tasks:", err);
     throw err;
@@ -32,9 +46,7 @@ export const getTask = async (taskId) => {
   try {
     const res = await api.get(`/tasks/${taskId}`);
     //check status of response
-    if (res.status === 500) {
-      throw new Error("Server error");
-    }
+    handleServerError(res);
     //retrieve task from response
     const task = res.data;
     if (!task) {
@@ -49,49 +61,54 @@ export const getTask = async (taskId) => {
 
 /**
  * getAllSubtasks - Async function that retrieves all the subtasks for a task
- * @param {String} taskId: ID of tasks for which subtasks is to be retrieved
- * @returns {Promise<Array>} An array of subtasks
+ * @param {Object} queryParams: Params to filter subtasks being retrieved
+ * @returns {Array} An array of subtasks
  */
-export const getAllSubTasks = async (taskId) => {
+export const getSubTasks = async (queryParams = {}) => {
   try {
-    const task = await getTask(taskId);
-    return task.subtasks;
-  } catch (err) {
-    console.error("Error getting subtasks: ", err);
-    throw err;
-  }
-};
+    const { likeFilters, dateFilters, remainingParams } =
+      extractFilters(queryParams);
 
-/**
- * getSubtask - Async function that retrieves a single subtask
- * @param {String} taskId ID of task containing the subtask to be retrieved
- * @param {String} subtaskId ID of subtask to be retrieved from subtasks array
- * @returns {object} subtask to be retrieved
- */
-export const getSubtask = async (taskId, subtaskId) => {
-  try {
-    const task = await getTask(taskId);
+    //Building the queryString...
+    const queryString = new URLSearchParams(remainingParams).toString();
+    const url = queryString ? `/subtasks?${queryString}` : "/subtasks";
 
-    const subtask = task.subtasks.find((st) => st.id === subtaskId);
-    if (!subtask) {
-      throw new Error("Subtask not found");
-    }
-    return subtask;
+    //fetch data from db
+    const res = await api.get(url);
+
+    //check server error
+    handleServerError(res);
+    //filter data
+    const data = applyFilters(res.data, likeFilters, dateFilters);
+    return data;
   } catch (err) {
-    console.error("Error retrieving subtask: ", err);
+    console.error("Error retrieving subtasks: ", err);
     throw err;
   }
 };
 
 /**
  * getNotes - Async function that returns notes of a subtask
- * @param {String} taskId ID of task containing notes to be retrieved
- * @returns {Promise<Array>} An array of notes
+ * @param {Object} queryParams: Params to filter notes being retrieved
+ * @returns {Array} An array of notes
  */
-export const getNotes = async (taskId) => {
+export const getNotes = async (queryParams = {}) => {
   try {
-    const task = await getTask(taskId);
-    return task.notes;
+    const { likeFilters, dateFilters, remainingParams } =
+      extractFilters(queryParams);
+
+    //Building the queryString...
+    const queryString = new URLSearchParams(remainingParams).toString();
+    const url = queryString ? `/notes?${queryString}` : "/notes";
+
+    //fetch data from db
+    const res = await api.get(url);
+
+    //check server error
+    handleServerError(res);
+    //filter data
+    const data = applyFilters(res.data, likeFilters, dateFilters);
+    return data;
   } catch (err) {
     console.error("Error retrieving notes: ", err);
     throw err;
@@ -102,7 +119,7 @@ export const getNotes = async (taskId) => {
 /**
  * createTask - Async function that creates a new task
  * @param {object} taskData: Task to be saved to db
- * @returns {object} The saved task to db
+ * @returns {object} The created task
  */
 export const createTask = async (taskData) => {
   try {
@@ -110,12 +127,12 @@ export const createTask = async (taskData) => {
     const newTask = {
       ...taskData,
       id: uuidv4(),
-      subtasks: [],
-      notes: [],
       createdAt: new Date().toISOString(),
     };
     //save data to db
     const res = await api.post("/tasks", newTask);
+    //Check for server error
+    handleServerError(res);
     return res.data;
   } catch (err) {
     console.error("Error creating task: ", err);
@@ -125,22 +142,17 @@ export const createTask = async (taskData) => {
 
 /**
  * createSubtask - Async function to create a subtask
- * @param {String} taskId: task in which subtask is to be added
  * @param {object} subtaskData: Subtask to be added to a task
- * @returns an updated task object containing the subtask data
+ * @returns {object} The created subtask
  */
-export const createSubtask = async (taskId, subtaskData) => {
+export const createSubtask = async (subtaskData) => {
   try {
-    //get task
-    const task = await getTask(taskId);
     //create new subtask
     const newSubtask = { ...subtaskData, id: uuidv4() };
-    //add new subtask to task
-    task.subtasks.push(newSubtask);
-    //indicate the updatedAt time
-    task.updatedAt = new Date().toISOString();
-    const updatedTask = await api.put(`/tasks/${taskId}`, task);
-    return updatedTask.data;
+    const res = await api.post(`/subtasks`, newSubtask);
+    //check for server error
+    handleServerError(res);
+    return res.data;
   } catch (err) {
     console.error("Error creating subtask: ", err);
     throw err;
@@ -149,25 +161,23 @@ export const createSubtask = async (taskId, subtaskData) => {
 
 /**
  * createNotes - Async function that creates a note for a task
- * @param {String} taskId task in which note is to be saved
  * @param {object} noteData note to be saved for a task
- * @returns an updated task with the note data
+ * @returns {object} The created note
  */
-export const createNote = async (taskId, noteData) => {
+export const createNote = async (noteData) => {
   try {
-    //get task
-    const task = await getTask(taskId);
-    //create new Note
+    //Add id and createdAt timestamp to note
     const newNote = {
       ...noteData,
       id: uuidv4(),
       createdAt: new Date().toISOString(),
     };
-    task.notes.push(newNote);
-    //indicate the updatedAt time
-    task.updatedAt = new Date().toISOString();
-    const updatedTask = await api.put(`/tasks/${taskId}`, task);
-    return updatedTask.data;
+
+    //save res to DB
+    const res = await api.post("/notes", newNote);
+    //check for server error
+    handleServerError(res);
+    return res.data;
   } catch (err) {
     console.error("Error creating note: ", err);
     throw err;
@@ -177,8 +187,8 @@ export const createNote = async (taskId, noteData) => {
 //UPDATE ENDPOINTS
 /**
  * updateTask - updates a task
- * @pString} taskId ID of the task to be updated
- * @param {object} taskData new task to be updated
+ * @param {String} taskId ID of the task to be updated
+ * @param {object} taskData updated task
  * @returns returns the updated Task
  */
 export const updateTask = async (taskId, taskData) => {
@@ -188,10 +198,10 @@ export const updateTask = async (taskId, taskData) => {
       ...taskData,
       updatedAt: new Date().toISOString(),
     };
-    //indicate the updatedAt time
-    updatedTaskData.updatedAt = new Date().toISOString();
-    const updatedTask = await api.patch(`/tasks/${taskId}`, updatedTaskData);
-    return updatedTask.data;
+    const res = await api.patch(`/tasks/${taskId}`, updatedTaskData);
+    //check for server error
+    handleServerError(res);
+    return res.data;
   } catch (err) {
     console.error("Error updating task:", err);
     throw err;
@@ -205,25 +215,17 @@ export const updateTask = async (taskId, taskData) => {
  * @param {object} subtaskData subtask update data
  * @returns returns the task with updated subtask
  */
-export const updateSubtask = async (taskId, subtaskId, subtaskData) => {
+export const updateSubtask = async (subtaskId, subtaskData) => {
   try {
-    //get task
-    const task = await getTask(taskId);
-    //get Index of Subtask
-    const subtaskIndex = task.subtasks.findIndex((st) => st.id === subtaskId);
-    if (subtaskIndex === -1) {
-      throw new Error("updateSubtask: Subtask not found");
-    }
-    //update specific subtask
-    task.subtasks[subtaskIndex] = {
-      ...task.subtasks[subtaskIndex],
+    //update the updated At time
+    const updatedSubtaskData = {
       ...subtaskData,
+      updatedAt: new Date().toISOString(),
     };
-    //indicate the updatedAt time
-    task.updatedAt = new Date().toISOString();
-    //patch data and save to db
-    const updatedTask = await api.patch(`/tasks/${taskId}`, task);
-    return updatedTask.data;
+    const res = await api.patch(`/subtasks/${subtaskId}`, updatedSubtaskData);
+    //check for server error
+    handleServerError(res);
+    return res.data;
   } catch (err) {
     console.error("Error updating subtask:", err);
     throw err;
@@ -251,24 +253,16 @@ export const deleteTask = async (taskId) => {
 
 /**
  * deleteSubtask - deletes a subtask
- * @param {String} taskId ID of task which contains subtask to be deleted
  * @param {String} subtaskId ID of subtask to be deleted
- * @returns {object} An updated data with subtask deleted
+ * @returns {object} success status
  */
-export const deleteSubtask = async (taskId, subtaskId) => {
+export const deleteSubtask = async (subtaskId) => {
   try {
-    //get task
-    const task = await getTask(taskId);
-
-    const subtaskIndex = task.subtasks.findIndex((st) => st.id === subtaskId);
-    if (subtaskIndex === -1) {
-      throw new Error("deleteSubtask: Subtask not found");
-    }
-    //remove the subtask at this index
-    task.subtasks.splice(subtaskIndex, 1);
-    task.updatedAt = new Date().toISOString();
-    const updatedTask = await api.patch(`/tasks/${taskId}`, task);
-    return updatedTask.data;
+    await api.delete(`/subtasks/${subtaskId}`);
+    return {
+      status: "success",
+      message: "Subtask deleted successfully",
+    };
   } catch (err) {
     console.error("Error deleting subtask: ", err);
     throw err;
@@ -277,26 +271,18 @@ export const deleteSubtask = async (taskId, subtaskId) => {
 
 /**
  * deleteNote - deletes a note
- * @param {String} taskId ID of task which contains note to be deleted
  * @param {String} noteId ID of note to be deleted
- * @returns {object} An updated data with note deleted
+ * @returns {object} success status
  */
-export const deleteNote = async (taskId, noteId) => {
+export const deleteNote = async (noteId) => {
   try {
-    //get task
-    const task = await getTask(taskId);
-
-    const noteIndex = task.notes.findIndex((note) => note.id === noteId);
-    if (noteIndex === -1) {
-      throw new Error("deleteNote: Note not found");
-    }
-    //remove the Note at this index
-    task.notes.splice(noteIndex, 1);
-    task.updatedAt = new Date().toISOString();
-    const updatedTask = await api.patch(`/tasks/${taskId}`, task);
-    return updatedTask.data;
+    await api.delete(`/notes/${noteId}`);
+    return {
+      status: "success",
+      message: "Notes deleted successfully",
+    };
   } catch (err) {
-    console.error("Error deleting Note: ", err);
+    console.error("Error deleting notes: ", err);
     throw err;
   }
 };
