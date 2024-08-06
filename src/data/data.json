@@ -28,14 +28,17 @@
       ],
       "notes": [
         {
+          "id":1,
           "note": "Ensure all lesson plans align with the updated curriculum guidelines.",
           "createdAt": "2024-07-02T08:00:00.000Z"
         },
         {
+          "id":2,
           "note": "Incorporate feedback from previous semesters to improve the lesson structure.",
           "createdAt": "2024-07-03T09:00:00.000Z"
         },
         {
+          "id":3,
           "note": "Allocate time for interactive activities and student engagement.",
           "createdAt": "2024-07-04T10:00:00.000Z"
         }
@@ -72,14 +75,17 @@
       ],
       "notes": [
         {
+          "id":1,
           "note": "Coordinate with suppliers to ensure timely delivery of spare parts for machinery.",
           "createdAt": "2024-07-02T08:00:00.000Z"
         },
         {
+          "id":2,
           "note": "Confirm availability of seasonal workers and verify their work permits.",
           "createdAt": "2024-07-03T09:00:00.000Z"
         },
         {
+          "id":3,
           "note": "Schedule a final walkthrough of storage facilities to ensure they meet safety standards.",
           "createdAt": "2024-07-04T10:00:00.000Z"
         }
@@ -116,14 +122,17 @@
       ],
       "notes": [
         {
+          "id":1,
           "note": "Ensure to get multiple quotes from contractors to find the best deal.",
           "createdAt": "2024-07-02T08:00:00.000Z"
         },
         {
+          "id":2,
           "note": "Consider energy-efficient appliances and sustainable materials.",
           "createdAt": "2024-07-03T09:00:00.000Z"
         },
         {
+          "id": 3,
           "note": "Create a temporary kitchen setup during the renovation period.",
           "createdAt": "2024-07-04T10:00:00.000Z"
         }
@@ -160,14 +169,17 @@
       ],
       "notes": [
         {
+          "id":1,
           "note": "Schedule regular check-ins with your advisor to get feedback on your progress.",
           "createdAt": "2024-07-02T08:00:00.000Z"
         },
         {
+          "id": 2,
           "note":  "Ensure all sources are properly cited to avoid plagiarism.",
           "createdAt": "2024-07-03T09:00:00.000Z"
         },
         {
+          "id": 3,
           "note": "Allow time for multiple revisions and proofreading.",
           "createdAt": "2024-07-04T10:00:00.000Z"
         }
@@ -204,14 +216,17 @@
       ],
       "notes": [
         {
+          "id":1,
           "note": "Confirm the availability of key team members before finalizing the meeting date.",
           "createdAt": "2024-07-02T08:00:00.000Z"
         },
         {
+          "id":2,
           "note": "Distribute the agenda in advance to allow team members to prepare.",
           "createdAt": "2024-07-03T09:00:00.000Z"
         },
         {
+          "id":3,
           "note": "Arrange for any necessary audiovisual equipment.",
           "createdAt": "2024-07-04T10:00:00.000Z"
         }
@@ -248,14 +263,17 @@
       ],
       "notes": [
         {
+          "id": 1,
           "note": "Reach out to parents for dietary restrictions or allergies for the guests.",
           "createdAt": "2024-07-02T08:00:00.000Z"
         },
         {
+          "id": 2,
           "note": "Plan fun activities and games for the children.",
           "createdAt": "2024-07-03T09:00:00.000Z"
         },
         {
+          "id": 3,
           "note": "Ensure there is a backup plan in case of bad weather if the party is outdoors.",
           "createdAt": "2024-07-04T10:00:00.000Z"
         }
@@ -292,14 +310,17 @@
       ],
       "notes": [
         {
+          "id": 1,
           "note": "Analyze competitor campaigns for insights on effective strategies.",
           "createdAt": "2024-07-02T08:00:00.000Z"
         },
         {
+          "id": 2,
           "note": "Track and measure the performance of the campaign.",
           "createdAt": "2024-07-03T09:00:00.000Z"
         },
         {
+          "id": 3,
           "note": "Allocate a portion of the budget for A/B testing.",
           "createdAt": "2024-07-04T10:00:00.000Z"
         }
@@ -336,14 +357,17 @@
       ],
       "notes": [
         {
+          "id": 1,
           "note":  "Check for any travel restrictions or requirements for the destination.",
           "createdAt": "2024-07-02T08:00:00.000Z"
         },
         {
+          "id": 2,
           "note":  "Ensure all travel documents, including passports and visas, are up to date.",
           "createdAt": "2024-07-03T09:00:00.000Z"
         },
         {
+          "id": 3,
           "note": "Research local attractions and make reservations for popular activities in advance.",
           "createdAt": "2024-07-04T10:00:00.000Z"
         }

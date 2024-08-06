@@ -28,12 +28,9 @@ const TaskCard = () => {
           </div>
         </div>
         <div className="flex gap-4">
-          {/*Edit */}
           <button>
             <EditIcon />
           </button>
-
-          {/*Delete */}
           <button>
             <DeleteIcon />
           </button>
