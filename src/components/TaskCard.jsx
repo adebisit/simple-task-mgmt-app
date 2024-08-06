@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import moment from "moment";
 import Moment from "react-moment";
-
-//importing files...
-import { EditIcon, DeleteIcon, CustomRadioButton } from "./Icon";
+import { EditIcon, DeleteIcon } from "./Icon";
 
 const TaskCard = () => {
   const [isIconChecked, setIsIconChecked] = useState(false);
@@ -17,7 +15,7 @@ const TaskCard = () => {
 
   return (
     <>
-      <div className="flex flex-row items-start mt-4 mb-4 w-full items-center">
+      <div className="flex flex-row items-start mt-4 mb-4 w-full ">
         <div
           onClick={handleCheckIconClick}
           className={`mr-4 cursor-pointer text-2xl ${
@@ -26,8 +24,6 @@ const TaskCard = () => {
               : "text-gray-500 border-gray-300"
           }`}
         >
-          {/*Displays appropriate icon based on isIconChecked State*/}
-          <CustomRadioButton isIconChecked={isIconChecked} />
         </div>
         <div className="flex-1">
           <div style={{ fontSize: "20px" }} className="font-bold">
@@ -39,16 +35,17 @@ const TaskCard = () => {
           >
             Short description about task
           </div>
-          <div
-            style={{ fontSize: "12px" }}
-            className="font-bold text-red-600"
-          >
+          <div style={{ fontSize: "12px" }} className="font-bold text-red-600">
             Due: <Moment toNow>{dueDate}</Moment>
           </div>
         </div>
         <div className="flex gap-4">
-          <EditIcon />
-          <DeleteIcon />
+          <button>
+            <EditIcon />
+          </button>
+          <button>
+            <DeleteIcon />
+          </button>
         </div>
       </div>
     </>

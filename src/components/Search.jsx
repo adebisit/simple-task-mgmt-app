@@ -1,7 +1,4 @@
-//importing react packages...
 import React from "react";
-
-//importing files...
 import { FilterIcon, SortIcon } from "./Icon.jsx";
 
 
@@ -17,8 +14,12 @@ const Search = () => {
         />
       </div>
       <div className="flex justify-evenly w-auto ml-4 space-x-2">
-        <FilterIcon />
-        <SortIcon />
+        <button>
+          <FilterIcon />
+        </button>
+        <button>
+          <SortIcon />
+        </button>
       </div>
     </div>
   );
