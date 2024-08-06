@@ -1,5 +1,5 @@
 import React from 'react';
-import { CloseIcon } from '../Icon';
+import { CloseIcon } from '../components/Icon';
 
 export default function Modal({ showModal, title, content, primaryBtn, secondaryBtn, onClose, onSave, onCancel }) {
     return (
