@@ -1,33 +1,21 @@
-import React, { useState } from "react";
 import moment from "moment";
 import Moment from "react-moment";
-import { EditIcon, DeleteIcon } from "./Icon";
+import "../index";
+//importing files...
+import { DeleteIcon, EditIcon } from "./Icon";
+import CustomRadioButton from "./shared/CustomRadioButton";
 
 const TaskCard = () => {
-  const [isIconChecked, setIsIconChecked] = useState(false);
-
-  const handleCheckIconClick = () => {
-    setIsIconChecked(!isIconChecked);
-  };
-
   //get date from moment package
   const dueDate = moment().add(5, "days");
 
   return (
     <>
-      <div className="flex flex-row items-start mt-4 mb-4 w-full ">
-        <div
-          onClick={handleCheckIconClick}
-          className={`mr-4 cursor-pointer text-2xl ${
-            isIconChecked
-              ? "text-gray-500 border-gray-500"
-              : "text-gray-500 border-gray-300"
-          }`}
-        >
-        </div>
+      <div className="flex flex-row items-start mt-4 mb-4 w-full items-center">
+        <CustomRadioButton />
         <div className="flex-1">
           <div style={{ fontSize: "20px" }} className="font-bold">
-          Task 1
+            Task 1
           </div>
           <div
             style={{ fontSize: "16px" }}
