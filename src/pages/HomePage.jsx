@@ -6,30 +6,22 @@ import Navbar from "../components/Navbar";
 import Search from "../components/Search";
 import TaskCard from "../components/TaskCard";
 import AddTaskButton from "../components/AddTaskButton";
+import AddTaskForm from "../forms/modal-forms/AddTaskForm"
 import SeeMoreLink from "../components/SeeMoreLink";
-import Modal from "../components/modals/Modal";
+import Modal from "../modals/Modal";
 import { useState } from "react";
 
 function HomePage() {
     const [showModal, setShowModal] = useState(false);
-    const [title, setTitle] = useState('');
     const [content, setContent] = useState(null);
-    const [primaryBtn, setPrimaryBtn] = useState('');
-    const [secondaryBtn, setSecondaryBtn] = useState('');
 
     const openAddNewTaskModal = () => {
-        setTitle('Add New Task');
-        //  setContent(<AddTaskForm />);
-        setPrimaryBtn('Cancel');
-        setSecondaryBtn('Add Task');
+        setContent(<AddTaskForm />);
         setShowModal(true);
     }
 
     const openDeleteTaskModal = () => {
-        setTitle('Delete Task');
         // setContent(<DeleteTaskForm />);
-        setPrimaryBtn('Cancel');
-        setSecondaryBtn('Delete');
         setShowModal(true);
     }
 
@@ -54,11 +46,11 @@ function HomePage() {
             <SeeMoreLink />
             <Modal
                 showModal={showModal}
-                title={title}
+                title={"Add New Task"}
                 content={content}
                 onClose={onClose}
-                primaryBtn={primaryBtn}
-                secondaryBtn={secondaryBtn}
+                primaryBtn={"Cancel"}
+                secondaryBtn={"Save"}
                 onCancel={onCancel}
                 onSave={onSave}
             />
