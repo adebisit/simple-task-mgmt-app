@@ -15,7 +15,7 @@ function HomePage() {
       <Search />
       <TaskCard />
       <AddTaskButton />
-      <SeeMoreLink/>
+      <SeeMoreLink />
     </div>
   );
 }
