@@ -18,4 +18,24 @@
   body {
     font-family: var(--font-inter);
   }
+
+  .custom-radio-button {
+    border-radius: 50%;
+    border: 2px solid #3b3b3b;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .inner-container {
+    border-radius: 50%;
+    background-color: #808080;
+    position: absolute;
+  }
+
+  .custom-radio-button:hover {
+    border-color: #606060;
+  }
 }
