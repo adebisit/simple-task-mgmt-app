@@ -1,61 +1,61 @@
 //importing React packages...
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 //importing components...
 import Navbar from "../components/Navbar";
 import Search from "../components/Search";
-import TaskCard from "../components/TaskCard";
 import AddTaskButton from "../components/AddTaskButton";
-import AddTaskForm from "../forms/modal-forms/AddTaskForm"
+import AddTaskForm from "../forms/modal-forms/AddTaskForm";
 import SeeMoreLink from "../components/SeeMoreLink";
-import Modal from "../modals/Modal";
-import { useState } from "react";
+import { createTask, getTasks } from "../services/taskService";
+import { useModal } from "../hooks/useModal";
+import TaskCard from "../components/TaskCard";
 
 function HomePage() {
-    const [showModal, setShowModal] = useState(false);
-    const [content, setContent] = useState(null);
+  const [tasks, setTasks] = useState([]);
 
-    const openAddNewTaskModal = () => {
-        setContent(<AddTaskForm />);
-        setShowModal(true);
+  useEffect(() => {
+    async function fetchData() {
+      const tasks = await getTasks();
+      setTasks(tasks);
     }
+    fetchData();
+  }, [tasks]);
+  const { modal: AddTaskModal, setIsOpen } = useModal({
+    title: "Add New Task",
+    contentFn: ({ setParentModalFormData }) => (
+      <AddTaskForm setParentModalFormData={setParentModalFormData} />
+    ),
+    primaryBtnTxt: "Save",
+    secondaryBtnTxt: "Cancel",
+    loadingComp: "Saving...",
+    onSave: async (formData) => {
+      await createTask({
+        name: formData.title,
+        description: formData.description,
+        dueDate: formData.dueDate,
+        priority: formData.priority,
+      });
+    },
+    onCancel: () => {},
+    requiresValidation: true,
+  });
 
-    const openDeleteTaskModal = () => {
-        // setContent(<DeleteTaskForm />);
-        setShowModal(true);
-    }
+  const openAddNewTaskModal = () => {
+    setIsOpen(true);
+  };
 
-    const onClose = () => {
-        setShowModal(false);
-    }
-
-    const onCancel = () => {
-        setShowModal(false);
-    }
-
-    const onSave = () => {
-        setShowModal(false);
-    }
-
-    return (
-        <div className="min-h-screen bg-gray-100 flex flex-col items-center pt-16 px-4 sm:px-8 md:px-32 lg:px-64 xl:px-64">
-            <Navbar />
-            <Search />
-            <TaskCard />
-            <AddTaskButton onClick={openAddNewTaskModal} />
-            <SeeMoreLink />
-            <Modal
-                showModal={showModal}
-                title={"Add New Task"}
-                content={content}
-                onClose={onClose}
-                primaryBtn={"Cancel"}
-                secondaryBtn={"Save"}
-                onCancel={onCancel}
-                onSave={onSave}
-            />
-        </div>
-    );
+  return (
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center pt-16 px-4 sm:px-8 md:px-32 lg:px-64 xl:px-64">
+      <Navbar />
+      <Search />
+      {tasks.map((task) => (
+        <TaskCard key={task.id} task={task} />
+      ))}
+      <AddTaskButton onClick={openAddNewTaskModal} />
+      <SeeMoreLink />
+      {AddTaskModal}
+    </div>
+  );
 }
-
 export default HomePage;
