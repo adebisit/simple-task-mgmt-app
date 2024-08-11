@@ -1,19 +1,33 @@
-import { useState } from 'react';
+import React, { useState } from "react";
+import Modal from "../modals/Modal";
 
-export function useModal() {
-  const [isVisible, setIsVisible] = useState(false);
+export function useModal({
+  title,
+  contentFn = () => {},
+  primaryBtnTxt,
+  secondaryBtnTxt,
+  loadingComp,
+  onSave,
+  onCancel,
+  requiresValidation = false
+}) {
+  const [isOpen, setIsOpen] = useState(false);
 
-  function openModal() {
-    setIsVisible(true);
-  }
+  const modal = isOpen ? (
+    <Modal
+      setIsOpen={setIsOpen}
+      title={title}
+      contentFn={contentFn}
+      primaryBtnTxt={primaryBtnTxt}
+      secondaryBtnTxt={secondaryBtnTxt}
+      loadingComp={loadingComp}
+      onSave={onSave}
+      onCancel={onCancel}
+      requiresValidation={requiresValidation}
+    />
+  ) : (
+    <></>
+  );
 
-  function closeModal() {
-    setIsVisible(false);
-  }
-
-  return {
-    isVisible,
-    openModal,
-    closeModal,
-  };
+  return { modal, setIsOpen };
 }
