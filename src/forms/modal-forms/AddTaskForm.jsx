@@ -1,31 +1,31 @@
 // src/components/AddTaskForm.jsx
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-const AddTaskForm = ({ onChange }) => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [dueDate, setDueDate] = useState("");
-  const [priority, setPriority] = useState("");
+const AddTaskForm = ({ setParentModalFormData }) => {
+  // const [formData, setFormData] = useState({
+  //   title: "",
+  //   description: "",
+  //   dueDate: "",
+  //   priority: 1,
+  // });
 
-  const handleTitleChange = (e) => {
-    setTitle(e.target.value);
-    onChange({ title: e.target.value, description, dueDate, priority });
-  };
-  
-  const handleDescriptionChange = (e) => {
-    setDescription(e.target.value);
-    onChange({ title, description: e.target.value, dueDate, priority });
-  };
-  
-  const handleDueDateChange = (e) => {
-    setDueDate(e.target.value);
-    onChange({ title, description, dueDate: e.target.value, priority });
+  const inputChange = (e) => {
+    const inputName = e.target.name;
+    const value = e.target.value;
+    if (inputName === "dueDate" && value) {
+      const date = new Date(value);
+      const isoDateString = date.toISOString();
+      //setFormData((prev) => ({ ...prev, [inputName]: isoDateString }));
+      setParentModalFormData((prev) => ({
+        ...prev,
+        [inputName]: isoDateString,
+      }));
+    } else {
+      //setFormData((prev) => ({ ...prev, [inputName]: value }));
+      setParentModalFormData((prev) => ({ ...prev, [inputName]: value }));
+    }
   };
 
-  const handlePriorityChange = (e) => {
-    setPriority(e.target.value);
-    onChange({ title, description, dueDate, priority: e.target.value });
-  };
   return (
     <form>
       <div className="mb-4 pb-2">
@@ -36,8 +36,10 @@ const AddTaskForm = ({ onChange }) => {
           className="border-2 border-gray-400 text-lg rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
           id="title"
           type="text"
-          value={title}
-          onChange={handleTitleChange}
+          name="title"
+          value={setParentModalFormData.title}
+          onChange={inputChange}
+          required
         />
       </div>
       <div className="mb-4">
@@ -50,8 +52,11 @@ const AddTaskForm = ({ onChange }) => {
         <textarea
           className="border-2 border-gray-400 rounded text-lg w-full py-4 px-3 leading-tight focus:outline-none"
           id="description"
-          value={description}
-          onChange={handleDescriptionChange}
+          type="text"
+          name="description"
+          value={setParentModalFormData.description}
+          onChange={inputChange}
+          required
         />
       </div>
       <div className="mb-4 flex pb-12">
@@ -63,8 +68,10 @@ const AddTaskForm = ({ onChange }) => {
             type="date"
             className="border-2 text-lg border-gray-400 rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="due-date"
-            value={dueDate}
-            onChange={handleDueDateChange}
+            name="dueDate"
+            value={setParentModalFormData.dueDate}
+            onChange={inputChange}
+            required
           />
         </div>
         <div className="w-1/2 ml-2">
@@ -75,8 +82,9 @@ const AddTaskForm = ({ onChange }) => {
             className="border-2 text-lg border-gray-400 rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="priority"
             type="text"
-            value={priority}
-            onChange={handlePriorityChange}
+            name="priority"
+            value={setParentModalFormData.priority}
+            onChange={inputChange}
           />
         </div>
       </div>
