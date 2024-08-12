@@ -105,6 +105,26 @@ const SortIcon = ({ ...props }) => {
     </svg>
   );
 };
+
+/*Option Icon*/
+const OptionIcon = () => {
+  return (
+    <svg
+      width="20px"
+      height="20px"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm0-6a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm0 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"
+        fill="#0D0D0D"
+      />
+    </svg>
+  );
+};
+
+
 const HambuggerIcon = ({ ...props }) => {
   return (
     <svg
@@ -144,5 +164,4 @@ const BackIcon = ({ ...props }) => {
   );
 }
 
-
-export { EditIcon, DeleteIcon, FilterIcon, SortIcon, PlusIcon, HambuggerIcon, BackIcon };
+export { EditIcon, DeleteIcon, FilterIcon, SortIcon, PlusIcon, HambuggerIcon, BackIcon, OptionIcon };
