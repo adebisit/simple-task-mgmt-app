@@ -124,7 +124,6 @@ const OptionIcon = () => {
   );
 };
 
-
 const HambuggerIcon = ({ ...props }) => {
   return (
     <svg
@@ -132,17 +131,18 @@ const HambuggerIcon = ({ ...props }) => {
       height="15"
       viewBox="0 0 21 15"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg">
-
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M1.61816 7.83928H19.8145M1.61816 1.90558H19.8145M1.61816 13.773H19.8145"
         stroke="#101828"
         strokeWidth="2"
         strokeLinecap="round"
-        strokeLinejoin="round" />
+        strokeLinejoin="round"
+      />
     </svg>
   );
-}
+};
 const BackIcon = ({ ...props }) => {
   return (
     <svg
@@ -150,18 +150,33 @@ const BackIcon = ({ ...props }) => {
       height="30"
       viewBox="0 0 31 30"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg">
-
-<rect x="0.15271" width="30.3273" height="29.6685" rx="14.8343" fill="#1486D8"/>
-<path
-  d="M20.6236 14.8343H10.009M10.009 14.8343L15.3163 20.0263M10.009 14.8343L15.3163 9.64227"
-  stroke="white"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"/>
-</svg>
-
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="0.15271"
+        width="30.3273"
+        height="29.6685"
+        rx="14.8343"
+        fill="#1486D8"
+      />
+      <path
+        d="M20.6236 14.8343H10.009M10.009 14.8343L15.3163 20.0263M10.009 14.8343L15.3163 9.64227"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
   );
-}
+};
 
-export { EditIcon, DeleteIcon, FilterIcon, SortIcon, PlusIcon, HambuggerIcon, BackIcon, OptionIcon };
+export {
+  EditIcon,
+  DeleteIcon,
+  FilterIcon,
+  SortIcon,
+  PlusIcon,
+  HambuggerIcon,
+  BackIcon,
+  OptionIcon,
+};
