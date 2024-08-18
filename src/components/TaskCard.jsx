@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import moment from "moment";
 import Moment from "react-moment";
 
@@ -37,17 +36,7 @@ const TaskCard = ({ task }) => {
   return (
     <>
       <div className="flex flex-row items-start mt-4 mb-4 w-full items-center">
-        <div
-          onClick={handleCheckIconClick}
-          className={`mr-4 cursor-pointer text-2xl ${
-            isIconChecked
-              ? "text-gray-500 border-gray-500"
-              : "text-gray-500 border-gray-300"
-          }`}
-        >
-          {/*Displays appropriate icon based on isIconChecked State*/}
-          <CustomRadioButton isIconChecked={isIconChecked} />
-        </div>
+        <CustomRadioButton />
         <div className="flex-1">
           <div style={{ fontSize: "20px" }} className="font-bold">
             {task.name}
