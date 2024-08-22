@@ -1,35 +1,28 @@
-import React, { useState } from "react";
-
-import { useLocation } from "react-router-dom";
-
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { getTask } from "../services/taskService";
 import { OptionIcon, PlusIcon } from "../components/Icon";
-
 import CustomRadioButton from "../components/shared/CustomRadioButton";
-
 import Sidebar from "../components/layout/Sidebar";
+import Notes from "../components/Notes";
 
 function DetailsPage({ tasksFiltered }) {
-  const location = useLocation();
-
-  const task = location.state?.task;
-
-  const [note, setNote] = useState("");
-
+  const { id: taskId } = useParams();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [task, setTask] = useState(null);
 
-  const handleInputChange = (e) => {
-    setNote(e.target.value);
-  };
+  useEffect(() => {
+    const fetchTask = async () => {
+      try {
+        const fetchedTask = await getTask(taskId);
+        setTask(fetchedTask);
+      } catch (error) {
+        console.error("Error fetching task:", error);
+      }
+    };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (note.trim()) {
-      console.log("Note submitted:", note);
-
-      setNote("");
-    }
-  };
+    fetchTask();
+  }, [taskId]);
 
   const handleClick = () => {
     // Add logic for handling the click event here
@@ -54,8 +47,6 @@ function DetailsPage({ tasksFiltered }) {
       >
         {task ? (
           <>
-            {/* Rest of your DetailsPage content */}
-
             <div className="border-b-2 border-b-black flex justify-between items-center">
               <div>
                 <h1 className="text-2xl font-bold text-sky-500">{task.name}</h1>
@@ -76,11 +67,11 @@ function DetailsPage({ tasksFiltered }) {
               </div>
             </div>
 
-            <div className="flex justify-start items-start mt-4 space-x-4">
+            <div className="flex justify-start items-start mt-4 space-x-4 p-4">
               <div className="flex-1">
                 <p>{task.description}</p>
+                <Notes />
               </div>
-
               <div className="flex-1">
                 <div className="flex items-center">
                   <h2 className="text-sky-500 font-bold text-2xl">Sub Task</h2>
@@ -94,35 +85,6 @@ function DetailsPage({ tasksFiltered }) {
                   <CustomRadioButton />
                 </button>
               </div>
-            </div>
-
-            <div className="mt-10">
-              <form onSubmit={handleSubmit} className="flex flex-col">
-                <label
-                  htmlFor="note"
-                  className="mb-2 text-sky-500 font-bold text-2xl"
-                >
-                  Add a Note
-                </label>
-
-                <input
-                  type="text"
-                  id="note"
-                  value={note}
-                  onChange={handleInputChange}
-                  placeholder="enter text here and press Ctrl + Enter to add...."
-                  className="w-[615px] h-[100px] border border-gray-300 rounded-lg mb-4"
-                />
-
-                <div className="flex justify-end w-[615px]">
-                  <button
-                    type="submit"
-                    className="bg-sky-500 text-white rounded-md hover:bg-sky-700 w-[80px] h-[35px]"
-                  >
-                    Add
-                  </button>
-                </div>
-              </form>
             </div>
 
             <div>
