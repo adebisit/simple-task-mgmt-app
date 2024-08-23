@@ -48,7 +48,7 @@ function Notes() {
             Add
           </button>
         </form>
-        {/* Notes section */}
+        {/* Note section */}
         <div className="mt-6 w-[615px]">
           {note.map((note) => (
             <div key={note.id} className="p-4 mt-1 w-full">

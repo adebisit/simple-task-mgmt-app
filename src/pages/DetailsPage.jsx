@@ -42,8 +42,11 @@ function DetailsPage({ tasksFiltered }) {
 
       <div
         className={`flex-1 p-4 transition-all duration-300 ${
-          isSidebarOpen ? "ml-16" : ""
+          isSidebarOpen ? "ml-60" : "ml-16"
         }`}
+        style={{
+          minWidth: isSidebarOpen ? `calc(100% - 15rem)` : `calc(100% - 4rem)`,
+        }}
       >
         {task ? (
           <>
