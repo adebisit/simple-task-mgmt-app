@@ -75,7 +75,7 @@ function DetailsPage({ tasksFiltered }) {
                 <p>{task.description}</p>
                 <Notes />
               </div>
-              <div className="flex-1">
+              {/* <div className="flex-1">
                 <div className="flex items-center">
                   <h2 className="text-sky-500 font-bold text-2xl">Sub Task</h2>
 
@@ -87,7 +87,7 @@ function DetailsPage({ tasksFiltered }) {
                 <button className="mt-4">
                   <CustomRadioButton />
                 </button>
-              </div>
+              </div> */}
             </div>
 
             <div>
