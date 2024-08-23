@@ -27,6 +27,7 @@ function Notes() {
 
   return (
     <div className="mt-20 p-2">
+      {/* Add Note section */}
       <div>
         <label htmlFor="note" className="mb-2 text-sky-500 font-bold text-2xl">
           Add a Note

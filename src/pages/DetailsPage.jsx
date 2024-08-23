@@ -75,6 +75,7 @@ function DetailsPage({ tasksFiltered }) {
                 <p>{task.description}</p>
                 <Notes />
               </div>
+              {/*Sub Task Section */}
               {/* <div className="flex-1">
                 <div className="flex items-center">
                   <h2 className="text-sky-500 font-bold text-2xl">Sub Task</h2>
