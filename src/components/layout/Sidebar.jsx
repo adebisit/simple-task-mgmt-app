@@ -11,7 +11,7 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const tasks = await getTasks({ dueDate: new Date().toISOString() });
+        const tasks = await getTasks({dueDate: new Date().toISOString()});
         setTasksDueToday(tasks);
       } catch (err) {
         console.error("Error fetching tasks: ", err);
