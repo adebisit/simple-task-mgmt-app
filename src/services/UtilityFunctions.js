@@ -48,35 +48,38 @@ export const extractFilters = (queryParams) => {
  * @param {object} dateFilters - The filters for date matching.
  * @returns {Array} The filtered data.
  */
-export const applyFilters = (data, likeFilters, dateFilters) => {
-  // Apply like filters
-  if (Object.entries(likeFilters).length > 0) {
-    data = data.filter((item) =>
-      Object.entries(likeFilters).every(([key, value]) =>
-        String(item[key.replace("_like", "")])
-          .toLowerCase()
-          .includes(value.toLowerCase())
-      )
-    );
-  }
-
-  // Apply date filters
-  if (Object.entries(dateFilters).length > 0) {
-    data = data.filter((item) =>
-      Object.entries(dateFilters).every(([key, value]) => {
-        const itemDate = new Date(item[key]);
-        const filterDate = new Date(value);
-
-        // Check if Item date is the same as filtered date
-        return (
-          itemDate.getFullYear() === filterDate.getFullYear() &&
-          itemDate.getMonth() === filterDate.getMonth() &&
-          itemDate.getDate() === filterDate.getDate()
-        );
-      })
-    );
-  }
-
-  return data;
-};
-
+  export const applyFilters = (data, likeFilters, dateFilters) => {
+    // Apply like filters
+    if (Object.entries(likeFilters).length > 0) {
+      data = data.filter((item) =>
+        Object.entries(likeFilters).every(([key, value]) =>
+          String(item[key.replace("_like", "")])
+            .toLowerCase()
+            .includes(value.toLowerCase())
+        )
+      );
+    }
+  
+    // Apply date filters
+    if (Object.entries(dateFilters).length > 0) {
+      data = data.filter((item) => {
+        return Object.entries(dateFilters).some(([key, value]) => {
+          const itemDate = new Date(item[key]);
+          const filterDate = new Date(value);
+  
+          return (
+            itemDate.getUTCFullYear() === filterDate.getUTCFullYear() &&
+            itemDate.getUTCMonth() === filterDate.getUTCMonth() &&
+            itemDate.getUTCDate() === filterDate.getUTCDate()
+          );
+        });
+      });
+  
+      // Sorting by priority
+      data.sort((a, b) => b.priority - a.priority);
+    }
+  
+    console.log("Final filtered data:", data);
+    return data;
+  };
+  

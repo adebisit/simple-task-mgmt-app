@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 
 //importing files...
 import api from "./axiosConfig";
+
 import {
   extractFilters,
   applyFilters,
@@ -45,20 +46,16 @@ export const getTasks = async (queryParams = {}) => {
 export const getTask = async (taskId) => {
   try {
     const res = await api.get(`/tasks/${taskId}`);
-    //check status of response
-    handleServerError(res);
-    //retrieve task from response
-    const task = res.data;
-    if (!task) {
+    // Check status of response
+    if (res.status !== 200) {
       throw new Error("Task not found");
     }
-    return task;
+    return res.data;
   } catch (err) {
     console.error("Error retrieving task: ", err);
     throw err;
   }
 };
-
 /**
  * getAllSubtasks - Async function that retrieves all the subtasks for a task
  * @param {Object} queryParams: Params to filter subtasks being retrieved

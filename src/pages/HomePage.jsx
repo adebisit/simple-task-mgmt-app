@@ -11,6 +11,31 @@ import { createTask, getTasks } from "../services/taskService";
 import { useModal } from "../hooks/useModal";
 import TaskCard from "../components/TaskCard";
 
+const tasks = [
+  {
+    id: "993211cd-561f-4776-9f57-545886c09284",
+    name: "Prepare Lesson Plan",
+    description:
+      "Create a comprehensive lesson plan for the upcoming semester.",
+    dueDate: "2024-07-15T23:59:59.000Z",
+    priority: 5,
+    createdAt: "2024-06-25T09:00:00.000Z",
+    updatedAt: "2024-07-01T10:00:00.000Z",
+    completedAt: "2024-06-25T09:00:00.000Z",
+  },
+  {
+    id: "b382c14f-9722-404a-85e2-35882086b6ab",
+    name: "Prepare for Harvest",
+    description:
+      "Get all necessary equipment and logistics ready for the upcoming harvest season.",
+    dueDate: "2024-07-05T17:00:00.000Z",
+    priority: 5,
+    createdAt: "2024-06-20T08:00:00.000Z",
+    updatedAt: "2024-07-04T16:30:00.000Z",
+    completedAt: "2024-07-04T16:30:00.000Z",
+  },
+];
+
 function HomePage() {
   const [tasks, setTasks] = useState([]);
 
