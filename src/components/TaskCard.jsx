@@ -1,13 +1,37 @@
 import moment from "moment";
 import Moment from "react-moment";
-import "../index";
-//importing files...
-import { DeleteIcon, EditIcon } from "./Icon";
-import CustomRadioButton from "./shared/CustomRadioButton";
 
-const TaskCard = () => {
+import { TASK_DESCRIPTION, TASK_TITLE } from "../constants";
+import { EditIcon, DeleteIcon, CustomRadioButton } from "./Icon";
+import DeleteTaskDialog from "../forms/modal-forms/DeleteTaskDialog";
+import { useModal } from "../hooks/useModal";
+import { deleteTask } from "../services/taskService";
+
+const TaskCard = ({ task }) => {
+  const [isIconChecked, setIsIconChecked] = useState(false);
+
+  const { modal: DeleteTaskDialogModal, setIsOpen } = useModal({
+    title: "Delete A Task",
+    contentFn: () => <DeleteTaskDialog />,
+    primaryBtnTxt: "Delete",
+    secondaryBtnTxt: "Cancel",
+    loadingComp: "Deleting...",
+    onSave: async () => {
+      await deleteTask("4e9f20d9-ba4d-4170-a241-9ada2ec2f83e");
+    },
+    onCancel: () => {},
+  });
+
+  const openDeleteTaskDialog = () => {
+    setIsOpen(true);
+  };
+
+  const handleCheckIconClick = () => {
+    setIsIconChecked(!isIconChecked);
+  };
+
   //get date from moment package
-  const dueDate = moment().add(5, "days");
+  //const dueDate = moment().add(5, "days");
 
   return (
     <>
@@ -15,27 +39,26 @@ const TaskCard = () => {
         <CustomRadioButton />
         <div className="flex-1">
           <div style={{ fontSize: "20px" }} className="font-bold">
-            Task 1
+            {task.name}
           </div>
           <div
             style={{ fontSize: "16px" }}
             className="text-gray-600 font-inter"
           >
-            Short description about task
+            {task.description}
           </div>
           <div style={{ fontSize: "12px" }} className="font-bold text-red-600">
-            Due: <Moment toNow>{dueDate}</Moment>
+            Due: <Moment toNow>{task.dueDate}</Moment>
           </div>
         </div>
         <div className="flex gap-4">
-          <button>
-            <EditIcon />
-          </button>
-          <button>
+          <EditIcon />
+          <button onClick={openDeleteTaskDialog}>
             <DeleteIcon />
           </button>
         </div>
       </div>
+      {DeleteTaskDialogModal}
     </>
   );
 };
