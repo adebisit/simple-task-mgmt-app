@@ -99,8 +99,8 @@ const SortIcon = ({ ...props }) => {
         d="M13 17.8333L18 22L23 17.8333M13 12L18 16.1667L23 12"
         stroke="#101828"
         stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        stroke-Linecap="round"
+        stroke-Linejoin="round"
       />
     </svg>
   );

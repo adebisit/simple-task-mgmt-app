@@ -12,7 +12,7 @@ const TaskCard = ({ task }) => {
     <div className="flex flex-row items-start mt-4 mb-4 w-full items-center">
       <CustomRadioButton />
       <div className="flex-1">
-        <Link to={`/task/${task.id}`} state={{ task }} className="no-underline">
+        <Link to={`/task/${task.id}`} className="no-underline">
           <div style={{ fontSize: "20px" }} className="font-bold">
             {task.name}
           </div>
