@@ -106,8 +106,7 @@ const SortIcon = ({ ...props }) => {
   );
 };
 
-/*Option Icon*/
-const OptionIcon = () => {
+const OptionIcon = ({ ...props }) => {
   return (
     <svg
       width="20px"
@@ -115,6 +114,7 @@ const OptionIcon = () => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm0-6a2 2 0 1 0 4 0 2 2 0 0 0-4 0zm0 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"
@@ -143,6 +143,7 @@ const HambuggerIcon = ({ ...props }) => {
     </svg>
   );
 };
+
 const BackIcon = ({ ...props }) => {
   return (
     <svg
@@ -170,6 +171,27 @@ const BackIcon = ({ ...props }) => {
   );
 };
 
+const CloseIcon = ({ ...props }) => {
+  return (
+    <svg
+      width={14}
+      height={14}
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M13 1L1 13M1 1L13 13"
+        stroke="#101828"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 export {
   EditIcon,
   DeleteIcon,
@@ -179,4 +201,5 @@ export {
   HambuggerIcon,
   BackIcon,
   OptionIcon,
+  CloseIcon
 };

@@ -1,26 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import moment from "moment";
 import Moment from "react-moment";
-
-import { TASK_DESCRIPTION, TASK_TITLE } from "../constants";
-import { EditIcon, DeleteIcon, CustomRadioButton } from "./Icon";
+import { EditIcon, DeleteIcon } from "./Icon";
+import CustomRadioButton from "../components/shared/CustomRadioButton"
 import DeleteTaskDialog from "../forms/modal-forms/DeleteTaskDialog";
 import { useModal } from "../hooks/useModal";
 import { deleteTask } from "../services/taskService";
 
-const TaskCard = ({ task }) => {
+const TaskCard = ({ task, delTask }) => {
   const [isIconChecked, setIsIconChecked] = useState(false);
-
   const { modal: DeleteTaskDialogModal, setIsOpen } = useModal({
     title: "Delete A Task",
-    contentFn: () => <DeleteTaskDialog />,
+    contentFn: () => "Are you sure you want to delete this task? This action cannot be undone.",
     primaryBtnTxt: "Delete",
     secondaryBtnTxt: "Cancel",
     loadingComp: "Deleting...",
-    onSave: async () => {
-      await deleteTask("4e9f20d9-ba4d-4170-a241-9ada2ec2f83e");
-    },
+    onSave: () => delTask(task.id),
     onCancel: () => {},
   });
 
@@ -29,11 +24,9 @@ const TaskCard = ({ task }) => {
   };
 
   const handleCheckIconClick = () => {
+    // @todo logic to update backend & taskstate -> REQUIRED
     setIsIconChecked(!isIconChecked);
   };
-
-  //get date from moment package
-  //const dueDate = moment().add(5, "days");
 
   return (
     <>
@@ -50,7 +43,10 @@ const TaskCard = ({ task }) => {
             >
               {task.description}
             </div>
-            <div style={{ fontSize: "12px" }} className="font-bold text-red-600">
+            <div
+              style={{ fontSize: "12px" }}
+              className={`font-bold ${new Date(task.dueDate) < new Date() ? "text-red-600" : "text-black-600"}`}
+            >
               Due: <Moment toNow>{task.dueDate}</Moment>
             </div>
           </Link>

@@ -10,42 +10,28 @@ import SeeMoreLink from "../components/SeeMoreLink";
 import { createTask, getTasks } from "../services/taskService";
 import { useModal } from "../hooks/useModal";
 import TaskCard from "../components/TaskCard";
-
-const tasks = [
-  {
-    id: "993211cd-561f-4776-9f57-545886c09284",
-    name: "Prepare Lesson Plan",
-    description:
-      "Create a comprehensive lesson plan for the upcoming semester.",
-    dueDate: "2024-07-15T23:59:59.000Z",
-    priority: 5,
-    createdAt: "2024-06-25T09:00:00.000Z",
-    updatedAt: "2024-07-01T10:00:00.000Z",
-    completedAt: "2024-06-25T09:00:00.000Z",
-  },
-  {
-    id: "b382c14f-9722-404a-85e2-35882086b6ab",
-    name: "Prepare for Harvest",
-    description:
-      "Get all necessary equipment and logistics ready for the upcoming harvest season.",
-    dueDate: "2024-07-05T17:00:00.000Z",
-    priority: 5,
-    createdAt: "2024-06-20T08:00:00.000Z",
-    updatedAt: "2024-07-04T16:30:00.000Z",
-    completedAt: "2024-07-04T16:30:00.000Z",
-  },
-];
+import { deleteTask } from "../services/taskService";
 
 function HomePage() {
   const [tasks, setTasks] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
-      const tasks = await getTasks();
-      setTasks(tasks);
+      setIsLoading(true)
+      const taskData = await getTasks();
+      setTasks(taskData);
+      console.log("Value of Tasks Changes")
+      setIsLoading(false)
     }
     fetchData();
-  }, [tasks]);
+  }, []);
+  
+  const delTask = async (taskId) => {
+    await deleteTask(taskId);
+    setTasks(prev => prev.filter(task => task.id !== taskId))
+  }
+
   const { modal: AddTaskModal, setIsOpen } = useModal({
     title: "Add New Task",
     contentFn: ({ setParentModalFormData }) => (
@@ -74,9 +60,16 @@ function HomePage() {
     <div className="min-h-screen bg-gray-100 flex flex-col items-center pt-16 px-4 sm:px-8 md:px-32 lg:px-64 xl:px-64">
       <Navbar />
       <Search />
-      {tasks.map((task) => (
-        <TaskCard key={task.id} task={task} />
-      ))}
+      {
+        isLoading ? (
+          <div className="loadingMessageContainer">
+            <div className="message">Loading...</div>
+          </div>
+        ) : 
+        tasks.map((task) => (
+          <TaskCard key={task.id} task={task} setTasks={setTasks} delTask={delTask} />
+        ))
+      }
       <AddTaskButton onClick={openAddNewTaskModal} />
       <SeeMoreLink />
       {AddTaskModal}
