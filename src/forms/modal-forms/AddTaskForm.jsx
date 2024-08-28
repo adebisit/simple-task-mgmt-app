@@ -1,14 +1,15 @@
 // src/components/AddTaskForm.jsx
 import React, { useState } from "react";
 
-const AddTaskForm = ({ setParentModalFormData }) => {
+const AddTaskForm = ({ initialData, setParentModalFormData }) => {
+  const [formData, setFormData] = useState(initialData)
   // const [formData, setFormData] = useState({
   //   title: "",
   //   description: "",
   //   dueDate: "",
   //   priority: 1,
   // });
-
+  
   const inputChange = (e) => {
     const inputName = e.target.name;
     const value = e.target.value;
@@ -16,12 +17,17 @@ const AddTaskForm = ({ setParentModalFormData }) => {
       const date = new Date(value);
       const isoDateString = date.toISOString();
       //setFormData((prev) => ({ ...prev, [inputName]: isoDateString }));
+      setFormData((prev) => ({
+        ...prev,
+        [inputName]: isoDateString,
+      }))
       setParentModalFormData((prev) => ({
         ...prev,
         [inputName]: isoDateString,
       }));
     } else {
       //setFormData((prev) => ({ ...prev, [inputName]: value }));
+      setFormData((prev) => ({ ...prev, [inputName]: value }));
       setParentModalFormData((prev) => ({ ...prev, [inputName]: value }));
     }
   };
@@ -37,7 +43,7 @@ const AddTaskForm = ({ setParentModalFormData }) => {
           id="title"
           type="text"
           name="title"
-          value={setParentModalFormData.title}
+          value={formData.title}
           onChange={inputChange}
           required
         />
@@ -54,7 +60,7 @@ const AddTaskForm = ({ setParentModalFormData }) => {
           id="description"
           type="text"
           name="description"
-          value={setParentModalFormData.description}
+          value={formData.description}
           onChange={inputChange}
           required
         />
@@ -69,7 +75,7 @@ const AddTaskForm = ({ setParentModalFormData }) => {
             className="border-2 text-lg border-gray-400 rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="due-date"
             name="dueDate"
-            value={setParentModalFormData.dueDate}
+            value={formData.dueDate.split('T')[0]}
             onChange={inputChange}
             required
           />
@@ -83,7 +89,7 @@ const AddTaskForm = ({ setParentModalFormData }) => {
             id="priority"
             type="text"
             name="priority"
-            value={setParentModalFormData.priority}
+            value={formData.priority}
             onChange={inputChange}
           />
         </div>

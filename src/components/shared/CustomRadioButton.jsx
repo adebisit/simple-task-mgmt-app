@@ -1,19 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const CustomRadioButton = ({ outerSize = 32, innerSize = 16 }) => {
-  const [isIconChecked, setIsIconChecked] = useState(false);
-
-  const handleIconClick = () => {
-    setIsIconChecked(!isIconChecked);
-  };
-
-  const onKeyDown = (event) => {
-    event.preventDefault();
-
-    if (event.key === "Enter" || event.key === " ") {
-      handleIconClick();
-    }
-  };
+const CustomRadioButton = ({ isChecked, outerSize = 32, innerSize = 16 }) => {
   return (
     <div
       className={
@@ -21,11 +8,9 @@ const CustomRadioButton = ({ outerSize = 32, innerSize = 16 }) => {
       }
       style={{ width: `${outerSize}px`, height: `${outerSize}px` }}
       role="button"
-      onClick={handleIconClick}
       tabIndex="0"
-      onKeyDown={onKeyDown}
     >
-      {isIconChecked && (
+      {isChecked && (
         <div
           className="inner-container"
           style={{ width: `${innerSize}px`, height: `${innerSize}px` }}

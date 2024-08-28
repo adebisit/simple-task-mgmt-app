@@ -14,7 +14,6 @@ export default function Modal({
 }) {
   const [formData, setFormData] = useState(null);
   const [processingModal, setProcessingModal] = useState(false);
-  console.log(onSave)
   
   const handleSave = () => {
     if (requiresValidation) {

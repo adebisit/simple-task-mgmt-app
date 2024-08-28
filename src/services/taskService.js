@@ -69,7 +69,6 @@ export const getSubTasks = async (queryParams = {}) => {
     //Building the queryString...
     const queryString = new URLSearchParams(remainingParams).toString();
     const url = queryString ? `/subtasks?${queryString}` : "/subtasks";
-
     //fetch data from db
     const res = await api.get(url);
 
@@ -237,7 +236,13 @@ export const updateSubtask = async (subtaskId, subtaskData) => {
  */
 export const deleteTask = async (taskId) => {
   try {
+    const subtasks = await getSubTasks({ taskId })
+    const notes = await getNotes({ taskId })
+
     await api.delete(`/tasks/${taskId}`);
+    subtasks.forEach(async subtask => await deleteSubtask(subtask.id))
+    notes.forEach(async notes => await deleteNote(notes.id))
+    
     return {
       status: "success",
       message: "Task deleted successfully",

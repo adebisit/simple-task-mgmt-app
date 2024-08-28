@@ -19,14 +19,19 @@ function HomePage() {
   useEffect(() => {
     async function fetchData() {
       setIsLoading(true)
-      const taskData = await getTasks();
-      setTasks(taskData);
-      console.log("Value of Tasks Changes")
+      const taskData = await getTasks()
+      setTasks(taskData)
       setIsLoading(false)
     }
     fetchData();
   }, []);
   
+  const updTask = async (taskId, updatedData) => {
+    setTasks(prev => [
+      ...prev.filter(task => task.id !== taskId),
+      updatedData
+    ])
+  }
   const delTask = async (taskId) => {
     await deleteTask(taskId);
     setTasks(prev => prev.filter(task => task.id !== taskId))
@@ -35,18 +40,24 @@ function HomePage() {
   const { modal: AddTaskModal, setIsOpen } = useModal({
     title: "Add New Task",
     contentFn: ({ setParentModalFormData }) => (
-      <AddTaskForm setParentModalFormData={setParentModalFormData} />
+      <AddTaskForm setParentModalFormData={setParentModalFormData} initialData={{
+        title: "",
+        description: "",
+        dueDate: "",
+        priority: "",
+      }} />
     ),
     primaryBtnTxt: "Save",
     secondaryBtnTxt: "Cancel",
     loadingComp: "Saving...",
     onSave: async (formData) => {
-      await createTask({
+      const newTask = await createTask({
         name: formData.title,
         description: formData.description,
         dueDate: formData.dueDate,
         priority: formData.priority,
       });
+      setTasks(prev => [...prev, newTask])
     },
     onCancel: () => {},
     requiresValidation: true,
@@ -67,7 +78,7 @@ function HomePage() {
           </div>
         ) : 
         tasks.map((task) => (
-          <TaskCard key={task.id} task={task} setTasks={setTasks} delTask={delTask} />
+          <TaskCard key={task.id} task={task} setTasks={setTasks} delTask={delTask} updTask={updTask} />
         ))
       }
       <AddTaskButton onClick={openAddNewTaskModal} />

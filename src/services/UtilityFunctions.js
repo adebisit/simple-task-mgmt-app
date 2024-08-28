@@ -78,8 +78,6 @@ export const extractFilters = (queryParams) => {
       // Sorting by priority
       data.sort((a, b) => b.priority - a.priority);
     }
-  
-    console.log("Final filtered data:", data);
     return data;
   };
   

@@ -62,7 +62,7 @@ export const testEndpoints = async () => {
       taskId: createdTask.id,
     };
     const createdSubtask = await createSubtask(newSubtask);
-    console.log("Created Subtask:", createdSubtask);
+    ("Created Subtask:", createdSubtask);
 
     // Test getting all subtasks
     const subtasks = await getSubTasks();
