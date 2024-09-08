@@ -124,6 +124,7 @@ export const createTask = async (taskData) => {
       ...taskData,
       id: uuidv4(),
       createdAt: new Date().toISOString(),
+      completedAt: null
     };
     //save data to db
     const res = await api.post("/tasks", newTask);

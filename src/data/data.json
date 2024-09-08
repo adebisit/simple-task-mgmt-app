@@ -57,6 +57,60 @@
       "priority": "3",
       "completedAt": null,
       "updatedAt": "2024-08-28T20:39:10.338Z"
+    },
+    {
+      "id": "9511fc22-9b2f-4a26-bd7c-8eeb14362d15",
+      "name": "Test to Check Adding New Task",
+      "description": "Checking new task",
+      "dueDate": "2024-09-26T00:00:00.000Z",
+      "priority": "4",
+      "createdAt": "2024-09-08T21:17:31.604Z",
+      "completedAt": null
+    },
+    {
+      "id": "5e64bae5-010d-4ffe-b547-429418e18bc4",
+      "name": "Test Task",
+      "description": "Descriptions ",
+      "dueDate": "2024-09-09T00:00:00.000Z",
+      "priority": "2",
+      "createdAt": "2024-09-08T21:28:55.790Z",
+      "completedAt": null
+    },
+    {
+      "id": "659a4fa6-72dd-4606-a5ae-f957243f587b",
+      "name": "Checking them out",
+      "description": "Descriptions another",
+      "dueDate": "2024-09-19T00:00:00.000Z",
+      "priority": "2",
+      "createdAt": "2024-09-08T21:30:10.701Z",
+      "completedAt": null
+    },
+    {
+      "id": "adaa2c1d-0c80-4568-9fc4-4e72117dd732",
+      "name": "tester",
+      "description": "test the code",
+      "dueDate": "2024-09-17T00:00:00.000Z",
+      "priority": "6",
+      "createdAt": "2024-09-08T21:31:22.225Z",
+      "completedAt": null
+    },
+    {
+      "id": "61c8c972-defc-411f-b74e-b09c78ec3d25",
+      "name": "tester",
+      "description": "Test another functionality",
+      "dueDate": "2024-09-26T00:00:00.000Z",
+      "priority": "2",
+      "createdAt": "2024-09-08T21:32:21.790Z",
+      "completedAt": null
+    },
+    {
+      "id": "8c77a196-23dc-4da9-a661-607658e0b127",
+      "name": "test new functionality",
+      "description": "testing new functionality",
+      "dueDate": "2024-09-27T00:00:00.000Z",
+      "priority": "4",
+      "createdAt": "2024-09-08T21:33:49.259Z",
+      "completedAt": null
     }
   ],
   "subtasks": [

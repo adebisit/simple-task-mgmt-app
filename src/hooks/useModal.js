@@ -9,6 +9,7 @@ export function useModal({
   loadingComp,
   onSave,
   onCancel,
+  onModalClose,
   requiresValidation = false
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +23,7 @@ export function useModal({
       secondaryBtnTxt={secondaryBtnTxt}
       loadingComp={loadingComp}
       onSave={onSave}
+      onModalClose={onModalClose}
       onCancel={onCancel}
       requiresValidation={requiresValidation}
     />

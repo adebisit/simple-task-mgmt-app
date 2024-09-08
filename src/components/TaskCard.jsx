@@ -52,6 +52,7 @@ const TaskCard = ({ task, delTask, updTask }) => {
     const updatedTask = await updateTask(task.id, {"completedAt": new Date()})
     updTask(task.id, updatedTask)
   }
+  
   return (
     <>
       <div className="flex flex-row items-start mt-4 mb-4 w-full items-center">
@@ -78,10 +79,10 @@ const TaskCard = ({ task, delTask, updTask }) => {
           </Link>
           </div>
           <div className="flex gap-4">
-            <button onClick={() => setEditTaskModalOpen(true)}>
+            <button onClick={() => setEditTaskModalOpen(true)} style={{ cursor: "pointer", padding: "5px" }}>
               <EditIcon />
             </button>
-            <button onClick={openDeleteTaskDialog}>
+            <button onClick={openDeleteTaskDialog} style={{ cursor: "pointer", padding: "5px" }}>
               <DeleteIcon />
             </button>
           </div>

@@ -10,31 +10,26 @@ export default function Modal({
   loadingComp,
   onSave,
   onCancel,
+  onModalClose,
   requiresValidation
 }) {
   const [formData, setFormData] = useState(null);
   const [processingModal, setProcessingModal] = useState(false);
   
-  const handleSave = () => {
-    if (requiresValidation) {
-      if (
-        formData &&
-        Object.values(formData).every((value) => value.trim() !== "")
-      ) {
-        if (onSave) {
-          setProcessingModal(true);
-          onSave(formData);
-          setIsOpen(false);
-        }
-      } else {
+  const handleSave = async () => {
+    if (requiresValidation && formData && Object.values(formData).some((value) => value.trim() === "")) {
         alert("Input fields should not be empty");
-      }
-    } else {
-      if (onSave) {
-        setProcessingModal(true);
-        onSave(formData);
-        setIsOpen(false);
-      }
+        return
+    }
+
+    if (onSave) {
+      setProcessingModal(true);
+      const resp = await onSave(formData);
+      console.log("Response ")
+      console.log(resp)
+      setProcessingModal(false);
+      setIsOpen(false);
+      onModalClose(resp)
     }
   };
 
