@@ -1,4 +1,3 @@
-import api from "./axiosConfig";
 //UTILITY FUNCTIONS
 /**
  * Checks for errors from json-server response
