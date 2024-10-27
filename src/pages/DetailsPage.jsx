@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getTask } from "../services/taskService";
 import { OptionIcon, PlusIcon } from "../components/Icon";
-import CustomRadioButton from "../components/shared/CustomRadioButton";
 import Sidebar from "../components/layout/Sidebar";
-import Notes from "../components/Notes";
 
 function DetailsPage({ tasksFiltered }) {
   const { id: taskId } = useParams();
@@ -23,10 +21,6 @@ function DetailsPage({ tasksFiltered }) {
 
     fetchTask();
   }, [taskId]);
-
-  const handleClick = () => {
-    // Add logic for handling the click event here
-  };
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -48,7 +42,7 @@ function DetailsPage({ tasksFiltered }) {
           minWidth: isSidebarOpen ? `calc(100% - 15rem)` : `calc(100% - 4rem)`,
         }}
       >
-        {task ? (
+        {!task ? <p>Task not found.</p> : (
           <>
             <div className="border-b-2 border-b-black flex justify-between items-center">
               <div>
@@ -73,35 +67,18 @@ function DetailsPage({ tasksFiltered }) {
             <div className="flex justify-start items-start mt-4 space-x-4 p-4">
               <div className="flex-1">
                 <p>{task.description}</p>
-                <Notes />
+                {/* <Notes /> */}
               </div>
-              {/*Sub Task Section */}
-              {/* <div className="flex-1">
-                <div className="flex items-center">
-                  <h2 className="text-sky-500 font-bold text-2xl">Sub Task</h2>
-
-                  <button className="border rounded-md bg-sky-500 ml-4 p-1">
-                    <PlusIcon className="w-4 h-4" />
-                  </button>
-                </div>
-
-                <button className="mt-4">
-                  <CustomRadioButton />
-                </button>
-              </div> */}
             </div>
 
             <div>
               <button
                 className="fixed bottom-12 right-4 md:right-12 bg-blue-500 lg:right-28 text-white rounded-full p-4 shadow-lg hover:bg-blue-600 focus:outline-none items-center justify-center"
-                onClick={handleClick}
               >
                 <PlusIcon />
               </button>
             </div>
           </>
-        ) : (
-          <p>Task not found.</p>
         )}
       </div>
     </div>

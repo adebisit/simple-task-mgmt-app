@@ -60,6 +60,7 @@ const TaskCard = ({ task, delTask, updTask }) => {
           <CustomRadioButton isChecked={task.completedAt !== null}/>
         </button>
         <div className="flex-1">
+          
           <Link to={`/task/${task.id}`} className="no-underline">
             <div style={{ fontSize: "20px" }} className="font-bold">
               {task.name}
